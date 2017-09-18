@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Петруха Сецко](https://up.htmlacademy.ru/adaptive/12/user/22938).
-* Наставник: 'Михаил Ожерельев'.
+* Наставник: [Михаил Ожерельев](https://up.htmlacademy.ru/adaptive/12/user/29002).
 
 ---
 
