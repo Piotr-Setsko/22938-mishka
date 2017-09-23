@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Mishka - Форма</title>
+</head>
+<body>
+	<header class="main-header content-wrapper">
+		<div class="header-logo">
+			<a><img src="#" alt="logo"></a>
+		</div>
+		<div class="main-menu">
+			<input id="toggle" type="checkbox">
+			<label class="toggle-container" for="toggle">
+				<span class="button button-toggle"></span>
+			</label>
+			<nav class="main-navigation">
+				<ul>
+					<li class="list-item"><a href="#">Каталог товаров</a></li>
+					<li class="list-item"><a href="#">Вязание на заказ</a></li>
+					<li class="list-item"><a href="#">Поиск по сайту</a></li>
+					<li class="list-item"><a href="#">Корзина: пока пуста</a></li>
+				</ul>			
+			</nav>
+		</div>	
+	</header>
+	<main>
+		<h1>Вязание на заказ</h1>
+		<p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+		<form action="https://echo.htmlacademy.ru" method="post">			
+			<fieldset>
+				<legend>Тип</legend>
+				<input type="radio" name="type-product" id="interior" value="interior" checked>	
+				<label for="interior">Аксессуар для интерьера</label>
+				<input type="radio" name="type-product" id="toy" value="toy">	
+				<label for="toy">Детская игрушка</label>
+			</fieldset>
+			<fieldset>
+				<legend>Цвет</legend>
+				<input type="checkbox" name="white" id="white" checked>
+				<label for="white">Белый</label>
+				<input type="checkbox" name="grey" id="grey" checked>
+				<label for="grey">Серый</label>
+				<input type="checkbox" name="tiffany" id="tiffany">
+				<label for="tiffany">«Тиффани»</label>
+				<input type="checkbox" name="black" id="black">
+				<label for="black">Черный</label>
+				<input type="checkbox" name="pink" id="pink">
+				<label for="pink">Розовый</label> 
+				<input type="checkbox" name="orange" id="orange">
+				<label for="orange">Оранжевый</label> 
+			</fieldset>
+			<fieldset>
+				<legend>ФИО</legend>
+				<label for="user-name">Имя:</label>
+				<input type="text" name="user-name" id="user-name" placeholder="Введите ваше имя&#42;" required>
+				<label for="user-surname">Фамилия:</label>
+				<input type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию&#42;" required>				
+				<label for="user-patronymic">Отчество:</label>
+				<input type="text" name="user-surname" id="user-surname" placeholder="Отчество, если желаете">
+			</fieldset>
+			<fieldset>
+				<legend>Тел</legend>				
+				<input type="tel" name="tel" id="tel" pattern="[+][7] [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="+7 XXX XX XX&#42;" required>
+				<label for="tel">Номер телефона</label>
+			</fieldset>
+			<fieldset>
+				<legend>E-mail</legend>				
+				<input type="email" name="user-email" id="user-email" placeholder="Ваш Email&#42;" required>
+				<label for="user-email">Электронная почта:</label>
+			</fieldset>
+			<fieldset>
+				<legend>Доп</legend>
+				<textarea name="user-text" id="user-text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+				<label for="user-text">Опишите все ваши пожелания к заказу</label>
+			</fieldset>
+			<p>*Поля обязательные для заполнения</p>
+			<button class="btn" type="submit" name="send-order">Отправить заказ</button>
+		</form>
+	</main>
+	<footer>
+		<section class="footer-social">
+			<a class="social-btn social-btn-inst" href="#">
+				<span class="visually-hidden">Инстаграм</span>
+			</a>
+			<a class="social-btn social-btn-fb" href="#">
+				<span class="visually-hidden">Фейсбук</span>
+			</a>
+			<a class="social-btn social-btn-tw"  href="#">
+				<span class="visually-hidden">Твитер</span>
+			</a>
+		</section>
+		<section class="copyright">
+			<p class="copyright-link">Разработано<a class="logo-academy" href="https://htmlacademy.ru/intensive/htmlcss"><span class="visually-hidden">"HTML Academy"</span></a></p>
+		</section>
+	</footer>	
+</body>
+</html>
