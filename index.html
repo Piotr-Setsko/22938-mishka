@@ -35,10 +35,10 @@
     <section class="promo">
       <h1 class="promo__title">Милые штуки ручной работы для дома</h1>
       <div class="promo__category">
-        <div class="promo__item">
+        <div class="promo__item promo__item--interior">
           <a class="promo__link" href="#">Предметы интерьера</a>
         </div>
-        <div class="promo__item--darker">
+        <div class="promo__item promo__item--toy">
           <a class="promo__link" href="#">Детские игрушки</a>
         </div>
       </div>
@@ -65,78 +65,99 @@
       <span class="product__price">Цена: 990 руб.</span>
       <a class="product__order button" href="#">Заказать</a>
     </article>
+    <section class="modal-order">
+      <h3 class="modal-order__title">Добавить в корзину</h3>
+      <p class="modal-order__option">Выберите размер:</p>
+      <form class="form-size" action="https://echo.htmlacademy.ru" method="post">
+        <input class="form-size__input" type="radio" name="size" id="size-small" value="size-small" checked>
+        <label class="form-size__label form-size__label--small" for="size-small">S<span class="visually-hidden">Маленький размер</span></label>
+        <input class="form-size__input" type="radio" name="size" id="size-middle" value="size-middle">
+        <label class="form-size__label form-size__label--middle" for="size-middle">M<span class="visually-hidden">Средний размер</span></label>
+        <input class="form-size__input" type="radio" name="size" id="size-large" value="size-large">
+        <label class="form-size__label form-size__label--large" for="size-large">L<span class="visually-hidden">Большой размер</span></label>
+        <button class="form-size__button button" type="button">Добавить</button>
+      </form>
+    </section>
     <div class="wave"></div>
     <section class="features">
-      <h2 class="features__title">Коротко о нас:</h2>
-      <ul class="features__list">
-        <li class="features__item features__item--eco">
-          <p class="features__desc">Экологически чистые материалы</p>
-        </li>
-        <li class="features__item features__item--money">
-          <p class="features__desc">Скандинавский стиль по росский цене</p>
-        </li>
-        <li class="features__item features__item--like">
-          <p class="features__desc">Увеличивает лайки на фотографиях</p>
-        </li>
-        <li class="features__item features__item--knit">
-          <p class="features__desc">Связано вручную с любовью и умилением</p>
-        </li>
-        <li class="features__item features__item--rocket">
-          <p class="features__desc">Поддержка отечественного производителя</p>
-        </li>
-        <li class="features__item features__item--gift">
-          <p class="features__desc">Поставляется в подарочной упаковке</p>
-        </li>
-      </ul>
+      <div class="features__wrapper">
+        <h2 class="features__title">Коротко о нас:</h2>
+        <ul class="features__list">
+          <li class="features__item features__item--eco">
+            <p class="features__desc">Экологически чистые материалы</p>
+          </li>
+          <li class="features__item features__item--money">
+            <p class="features__desc">Скандинавский стиль по росский цене</p>
+          </li>
+          <li class="features__item features__item--like">
+            <p class="features__desc">Увеличивает лайки на фотографиях</p>
+          </li>
+          <li class="features__item features__item--knit">
+            <p class="features__desc">Связано вручную с любовью и умилением</p>
+          </li>
+          <li class="features__item features__item--rocket">
+            <p class="features__desc">Поддержка отечественного производителя</p>
+          </li>
+          <li class="features__item features__item--gift">
+            <p class="features__desc">Поставляется в подарочной упаковке</p>
+          </li>
+        </ul>
+      </div>
     </section>
-    <article class="feedback">
-      <h2>Отзывы</h2>
-      <blockquote>
-        Я молодая мама, но всё ровно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и мои игрушек в Мишке, и мои фотографиисразу стали более стильными, а также набирают больше лайков.
-      </blockquote>
-      <cite>
-        Анастасия Красильникова
-        <span>
-          @misssssiskras
-        </span>
-      </cite>
-      <button class="arrow prew" type="button"><img src="#" alt="Предыдущий отзыв"></button>
-      <button class="arrow next" type="button"><img src="#" alt="Следующий отзыв"></button>
-      <button class="btn" type="submit" name="user-feedback">Написать</button>
+    <article class="reviews">
+      <div class="reviews__wrapper slider">
+        <h2 class="reviews__title">Отзывы</h2>
+        <div class="reviews__list slider__list">
+          <blockquote class="reviews__item slider__item">
+            <p class="reviews__text">Я молодая мама, но всё ровно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и мои игрушек в Мишке, и мои фотографиисразу стали более стильными, а также набирают больше лайков.</p>
+            <cite class="rewiews__author-name">Анастасия Красильникова
+              <span class="rewiews__author-name--nick">@misssssiskras</span>
+            </cite>
+          </blockquote>
+          <button class="reviews__prew" type="button">
+            <img src="#" alt="Предыдущий отзыв">
+          </button>
+          <button class="reviews__next" type="button">
+            <img src="#" alt="Следующий отзыв">
+          </button>
+        </div>
+        <a class="reviews__write button" href="#">Написать</a>
+      </div>
     </article>
+    <div class="wave"></div>
     <section class="contacts">
-      <div class="top-line"></div>
-      <h3>Контакты</h3>
-      <table>
+      <h3 class="contacts__title">Контакты</h3>
+      <table class="contacts__list">
         <tr>
-          <td>e-mail:</td>
-          <td>info@mimimishkashop.ru</td>
+          <td class="contacts__field">e-mail:</td>
+          <td class="contacts__value contacts__value--email">info@mimimishkashop.ru</td>
         </tr>
         <tr>
-          <td>адрес:</td>
-          <td>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+          <td class="contacts__field">адрес:</td>
+          <td class="contacts__value contacts__value--address">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
         </tr>
       </table>
-      <div class="map">
-        <img src="#" alt="Карта">
+      <div class="contacts__map">
+        <img src="#" alt="Карта" width="10px" height="10px">
       </div>
-      <button class="btn" type="submit" name="user-message">Написать</button>
+      <a class="contacts__write button" href="#">Напишите нам</a>
     </section>
   </main>
-  <footer>
-    <section class="footer-social">
-      <a class="social-btn social-btn-inst" href="#">
-        <span class="visually-hidden">Инстаграм</span>
+  <footer class="page-footer">
+    <section class="page-footer__social social">
+      <a class="social__link social__link--instagram" href="№">
+        <span class="visually-hidden">Мы в Инстаграме</span>
       </a>
-      <a class="social-btn social-btn-fb" href="#">
-        <span class="visually-hidden">Фейсбук</span>
+      <a class="social__link social__link--facebook" href="#">
+        <span class="visually-hidden">Мы в Фейсбуке</span>
       </a>
-      <a class="social-btn social-btn-tw"  href="#">
-        <span class="visually-hidden">Твитер</span>
+      <a class="social__link social__link--twitter"  href="#">
+        <span class="visually-hidden">Мы в Твитере</span>
       </a>
     </section>
-    <section class="copyright">
-      <p class="copyright-link">Разработано<a class="logo-academy" href="https://htmlacademy.ru/intensive/htmlcss"><span class="visually-hidden">"HTML Academy"</span></a></p>
+    <section class="page-footer__copyright copyright">
+      <b class="copyright__text">Разработано</b>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss"><span class="visually-hidden">"HTML Academy"</span></a>
     </section>
   </footer>
 </body>
