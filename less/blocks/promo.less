@@ -12,21 +12,16 @@
 
 .promo__link {
   display: block;
-  padding-top: 30px;
-  padding-bottom: 30px;
   font-size: 19px;
   color: @white;
   text-decoration: none;
-}
+  .padding(30px);
 
-.promo__link--interior {
-  background-color: @color-main;
-}
+  &--interior {
+    background-color: @color-main;
+  }
 
-.promo__link--toy {
-  background-color: @color-second;
-}
-
-.promo__item-text {
-  margin: 0 auto;
+  &--toy {
+    background-color: @color-second;
+  }
 }

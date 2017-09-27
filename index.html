@@ -12,9 +12,9 @@
     <nav class="main-nav">
       <div class="main-nav__wrapper">
       <a class="logo">
-        <img class="logo__image" src="img/" width="86" height="35" alt="Mishka">
+        <img class="logo__image" src="#" width="86" height="35" alt="Mishka">
       </a>
-      <button class="main-nav__button button" type="button">Открыть меню</button>
+      <button class="main-nav__button" type="button">Открыть меню</button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
             <a class="site-list__link" href="catalog.html">Каталог товаров</a>
@@ -49,17 +49,17 @@
     <article class="product">
       <h2 class="product__title">Вязаные корзинки</h2>
       <b class="product__top">Товар недели</b>
-      <p class="product__desc">Экологтчески чистая пряжа, ручная работа. Доступны в шести расцветках, и трехразмерах.</p>
+      <p class="product__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
       <table class="product__list">
-        <tr>
+        <tr class="product__line">
           <td class="product__field">Цвет:</td>
           <td class="product__value">«Тиффани»/серый</td>
         </tr>
-        <tr>
+        <tr class="product__line">
           <td class="product__field">Диаметр:</td>
           <td class="product__value">25 см</td>
         </tr>
-        <tr>
+        <tr class="product__line">
           <td class="product__field">Высота:</td>
           <td class="product__value">15 см</td>
         </tr>
@@ -69,30 +69,32 @@
       <a class="product__order button" href="#">Заказать</a>
     </article>
     <section class="modal-order">
-      <h3 class="modal-order__title">Добавить в корзину</h3>
+      <div class="modal-order__wrapper">
+      <h3 class="modal-order__title">Добавить в&nbsp;корзину</h3>
       <p class="modal-order__option">Выберите размер:</p>
-      <form class="form-size" action="https://echo.htmlacademy.ru" method="post">
+      <form class="modal-order__form form-size" action="https://echo.htmlacademy.ru" method="post">
         <input class="form-size__input" type="radio" name="size" id="size-small" value="size-small" checked>
         <label class="form-size__label form-size__label--small" for="size-small">S<span class="visually-hidden">Маленький размер</span></label>
         <input class="form-size__input" type="radio" name="size" id="size-middle" value="size-middle">
         <label class="form-size__label form-size__label--middle" for="size-middle">M<span class="visually-hidden">Средний размер</span></label>
         <input class="form-size__input" type="radio" name="size" id="size-large" value="size-large">
         <label class="form-size__label form-size__label--large" for="size-large">L<span class="visually-hidden">Большой размер</span></label>
-        <button class="form-size__button button" type="button">Добавить</button>
+        <button class="form-size__button" type="button">Добавить</button>
       </form>
+    </div>
     </section>
     <section class="features">
       <div class="features__wrapper">
         <h2 class="features__title">Коротко о нас:</h2>
         <ul class="features__list">
           <li class="features__item features__item--eco">
-            <p class="features__desc">Экологически чистые материалы</p>
+            <p class="features__desc">Экологически чистые&nbsp;материалы</p>
           </li>
           <li class="features__item features__item--money">
-            <p class="features__desc">Скандинавский стиль по росский цене</p>
+            <p class="features__desc">Скандинавский стиль по&nbsp;росский цене</p>
           </li>
           <li class="features__item features__item--like">
-            <p class="features__desc">Увеличивает лайки на фотографиях</p>
+            <p class="features__desc">Увеличивает лайки на&nbsp;фотографиях</p>
           </li>
           <li class="features__item features__item--knit">
             <p class="features__desc">Связано вручную с любовью и умилением</p>

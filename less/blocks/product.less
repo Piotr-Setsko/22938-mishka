@@ -20,12 +20,20 @@
 .product__desc {
   margin: 0;
   padding-top: 23px;
+  color: @color-text;
   .font(15px; 24px; 400);
 }
 
 .product__list {
-  padding-top: 15px;
+  margin-top: 20px;
+  width: 260px;
+  color: @color-text;
+  border-collapse: collapse;
   .font(15px; 24px; 400);
+}
+
+.product__line {
+  border-bottom: 1px solid @grey;
 }
 
 .product__field {
@@ -33,7 +41,7 @@
 }
 
 .product__value {
-  padding-left: 27px;
+  padding-left: 16px;
 }
 
 .product__img {
@@ -43,5 +51,6 @@
 .product__price {
   display: block;
   padding-top: 17px;
+  color: @color-text;
   text-align: center;
 }
