@@ -11,10 +11,10 @@
   <header class="page__header">
     <nav class="main-nav">
       <div class="main-nav__wrapper">
-      <a class="logo">
+        <a class="logo">
         <img class="logo__image" src="#" width="86" height="35" alt="Mishka">
-      </a>
-      <button class="main-nav__button" type="button">Открыть меню</button>
+        </a>
+        <button class="main-nav__button" type="button">Открыть меню</button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
             <a class="site-list__link" href="catalog.html">Каталог товаров</a>
@@ -39,10 +39,14 @@
       <h1 class="promo__title">Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
       <div class="promo__category">
         <a class="promo__link promo__link--interior" href="interior.html">
+          <div class="promo__inner">
           <b class="promo__item-text promo__item-text--interior">Предметы интерьера</b>
+          </div>
         </a>
         <a class="promo__link promo__link--toy" href="toy.html">
+          <div class="promo__inner">
           <b class="promo__item-text promo__item-text--toy">Детские игрушки</b>
+        </div>
         </a>
       </div>
     </section>
@@ -129,6 +133,7 @@
       </div>
     </article>
     <section class="contacts">
+      <div class="contacts__wrapper">
       <h3 class="contacts__title">Контакты</h3>
       <table class="contacts__list">
         <tr>
@@ -137,17 +142,21 @@
         </tr>
         <tr>
           <td class="contacts__field">адрес:</td>
-          <td class="contacts__value contacts__value--address">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+          <td class="contacts__value contacts__value--address">г. Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д. 19/8,&nbsp;офис 101</td>
         </tr>
       </table>
-      <div class="contacts__map">
-        <img src="#" alt="Карта" width="320" height="457">
       </div>
+      <div class="contacts__map">
+        <img src="img/map-mobile@1x.jpg" alt="Карта" width="320" height="457">
+      </div>
+      <div class="contacts__wrapper">
       <a class="contacts__write button" href="contacts.html">Напишите нам</a>
+    </div>
     </section>
   </main>
   <footer class="page__footer">
-    <section class="page-footer__social social">
+    <section class="social">
+      <div class="social__wrapper">
       <a class="social__link social__link--instagram" href="№">
         <span class="visually-hidden">Мы в Инстаграме</span>
       </a>
@@ -157,10 +166,13 @@
       <a class="social__link social__link--twitter"  href="#">
         <span class="visually-hidden">Мы в Твитере</span>
       </a>
+    </div>
     </section>
-    <section class="page-footer__copyright copyright">
-      <b class="copyright__text">Разработано</b>
+    <section class="copyright">
+      <div class="copyright__wrapper">
+      <p class="copyright__text">Разработано</p>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss"><span class="visually-hidden">"HTML Academy"</span></a>
+    </div>
     </section>
   </footer>
 </div>

@@ -3,10 +3,9 @@
 }
 
 .promo__title {
-  margin: 0 auto;
   padding: 70px 40px 120px;
-  width: 240px;
   text-align: center;
+  .wrapper(240px);
   .font(27px; 30px; 700);
 }
 
@@ -24,4 +23,13 @@
   &--toy {
     background-color: @color-second;
   }
+}
+
+.promo__inner {
+  .wrapper(260px);
+}
+
+.promo__item-text {
+  display: block;
+  width: 120px;
 }
