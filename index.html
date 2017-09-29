@@ -8,84 +8,88 @@
 </head>
 <body class="page">
   <div class="page__inner">
-  <header class="page__header">
-    <nav class="main-nav">
-      <div class="main-nav__wrapper">
-        <a class="logo">
-        <img class="logo__image" src="#" width="86" height="35" alt="Mishka">
-        </a>
-        <button class="main-nav__button" type="button">Открыть меню</button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Вязание на заказ</a>
-          </li>
-        </ul>
-        <ul class="main-nav__list user-list">
-          <li class="user-list__item user-list__item--search">
-            <a class="user-list__link" href="#">Поиск по сайту</a>
-          </li>
-          <li class="site-list__item user-list__item--basket">
-            <a class="user-list__link" href="#">Корзина: пока пуста</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <main class="page__main">
-    <section class="promo">
-      <h1 class="promo__title">Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
-      <div class="promo__category">
-        <a class="promo__link promo__link--interior" href="interior.html">
-          <div class="promo__inner">
-          <b class="promo__item-text promo__item-text--interior">Предметы интерьера</b>
-          </div>
-        </a>
-        <a class="promo__link promo__link--toy" href="toy.html">
-          <div class="promo__inner">
-          <b class="promo__item-text promo__item-text--toy">Детские игрушки</b>
+    <header class="page__header">
+      <nav class="main-nav">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <div class="site-list__inner">
+                <a class="logo">
+                  <img class="logo__image" src="#" width="86" height="35" alt="Mishka">
+                </a>
+                <button class="main-nav__button" type="button">Открыть меню</button>
+              </div>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="form.html">Вязание на заказ</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list user-list">
+            <li class="user-list__item user-list__item--search">
+              <a class="user-list__link" href="#">Поиск по сайту</a>
+            </li>
+            <li class="site-list__item user-list__item--basket">
+              <a class="user-list__link" href="#">Корзина: пока пуста</a>
+            </li>
+          </ul>
         </div>
-        </a>
+      </nav>
+    </header>
+    <main class="page__main">
+      <section class="promo">
+        <h1 class="promo__title">Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
+        <div class="promo__category">
+          <a class="promo__link promo__link--interior" href="interior.html">
+            <div class="promo__inner">
+              <b class="promo__item-text promo__item-text--interior">Предметы интерьера</b>
+            </div>
+          </a>
+          <a class="promo__link promo__link--toy" href="toy.html">
+            <div class="promo__inner">
+              <b class="promo__item-text promo__item-text--toy">Детские игрушки</b>
+            </div>
+          </a>
+        </div>
+      </section>
+      <article class="product">
+        <h2 class="product__title">Вязаные корзинки</h2>
+        <b class="product__top">Товар недели</b>
+        <p class="product__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <table class="product__list">
+          <tr class="product__line">
+            <td class="product__field">Цвет:</td>
+            <td class="product__value">«Тиффани»/серый</td>
+          </tr>
+          <tr class="product__line">
+            <td class="product__field">Диаметр:</td>
+            <td class="product__value">25 см</td>
+          </tr>
+          <tr class="product__line">
+            <td class="product__field">Высота:</td>
+            <td class="product__value">15 см</td>
+          </tr>
+        </table>
+        <img class="product__img" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+        <b class="product__price">Цена: 990 руб.</b>
+        <a class="product__order button" href="#">Заказать</a>
+      </article>
+      <section class="modal-order">
+        <div class="modal-order__wrapper">
+          <h3 class="modal-order__title">Добавить в&nbsp;корзину</h3>
+          <p class="modal-order__option">Выберите размер:</p>
+          <form class="modal-order__form form-size" action="https://echo.htmlacademy.ru" method="post">
+            <input class="form-size__input" type="radio" name="size" id="size-small" value="size-small" checked>
+            <label class="form-size__label form-size__label--small" for="size-small">S<span class="visually-hidden">Маленький размер</span></label>
+          <input class="form-size__input" type="radio" name="size" id="size-middle" value="size-middle">
+          <label class="form-size__label form-size__label--middle" for="size-middle">M<span class="visually-hidden">Средний размер</span></label>
+          <input class="form-size__input" type="radio" name="size" id="size-large" value="size-large">
+          <label class="form-size__label form-size__label--large" for="size-large">L<span class="visually-hidden">Большой размер</span></label>
+          <button class="form-size__button" type="button">Добавить</button>
+        </form>
       </div>
-    </section>
-    <article class="product">
-      <h2 class="product__title">Вязаные корзинки</h2>
-      <b class="product__top">Товар недели</b>
-      <p class="product__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-      <table class="product__list">
-        <tr class="product__line">
-          <td class="product__field">Цвет:</td>
-          <td class="product__value">«Тиффани»/серый</td>
-        </tr>
-        <tr class="product__line">
-          <td class="product__field">Диаметр:</td>
-          <td class="product__value">25 см</td>
-        </tr>
-        <tr class="product__line">
-          <td class="product__field">Высота:</td>
-          <td class="product__value">15 см</td>
-        </tr>
-      </table>
-      <img class="product__img" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
-      <b class="product__price">Цена: 990 руб.</b>
-      <a class="product__order button" href="#">Заказать</a>
-    </article>
-    <section class="modal-order">
-      <div class="modal-order__wrapper">
-      <h3 class="modal-order__title">Добавить в&nbsp;корзину</h3>
-      <p class="modal-order__option">Выберите размер:</p>
-      <form class="modal-order__form form-size" action="https://echo.htmlacademy.ru" method="post">
-        <input class="form-size__input" type="radio" name="size" id="size-small" value="size-small" checked>
-        <label class="form-size__label form-size__label--small" for="size-small">S<span class="visually-hidden">Маленький размер</span></label>
-        <input class="form-size__input" type="radio" name="size" id="size-middle" value="size-middle">
-        <label class="form-size__label form-size__label--middle" for="size-middle">M<span class="visually-hidden">Средний размер</span></label>
-        <input class="form-size__input" type="radio" name="size" id="size-large" value="size-large">
-        <label class="form-size__label form-size__label--large" for="size-large">L<span class="visually-hidden">Большой размер</span></label>
-        <button class="form-size__button" type="button">Добавить</button>
-      </form>
-    </div>
     </section>
     <section class="features">
       <div class="features__wrapper">
@@ -150,29 +154,29 @@
         <img src="img/map-mobile@1x.jpg" alt="Карта" width="320" height="457">
       </div>
       <div class="contacts__wrapper">
-      <a class="contacts__write button" href="contacts.html">Напишите нам</a>
-    </div>
+        <a class="contacts__write button" href="contacts.html">Напишите нам</a>
+      </div>
     </section>
   </main>
   <footer class="page__footer">
     <section class="social">
       <div class="social__wrapper">
-      <a class="social__link social__link--instagram" href="№">
-        <span class="visually-hidden">Мы в Инстаграме</span>
-      </a>
-      <a class="social__link social__link--facebook" href="#">
-        <span class="visually-hidden">Мы в Фейсбуке</span>
-      </a>
-      <a class="social__link social__link--twitter"  href="#">
-        <span class="visually-hidden">Мы в Твитере</span>
-      </a>
-    </div>
+        <a class="social__link social__link--instagram" href="№">
+          <span class="visually-hidden">Мы в Инстаграме</span>
+        </a>
+        <a class="social__link social__link--facebook" href="#">
+          <span class="visually-hidden">Мы в Фейсбуке</span>
+        </a>
+        <a class="social__link social__link--twitter"  href="#">
+          <span class="visually-hidden">Мы в Твитере</span>
+        </a>
+      </div>
     </section>
     <section class="copyright">
       <div class="copyright__wrapper">
-      <p class="copyright__text">Разработано</p>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss"><span class="visually-hidden">"HTML Academy"</span></a>
-    </div>
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss"><span class="visually-hidden">"HTML Academy"</span></a>
+      </div>
     </section>
   </footer>
 </div>
