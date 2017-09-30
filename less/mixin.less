@@ -1,0 +1,31 @@
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.wrapper(@width) {
+  margin: 0 auto;
+  width: @width;
+}
+
+.reset() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.font(@size: 17px; @line-height: 24px; @weight: 700) {
+  font-size: @size;
+  line-height: @line-height;
+  font-weight: @weight;
+}
+
+.padding(@padding) {
+  padding-top: @padding;
+  padding-bottom: @padding;
+}
