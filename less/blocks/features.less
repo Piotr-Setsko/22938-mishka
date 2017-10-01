@@ -17,3 +17,39 @@
   width: 250px;
   line-height: 20px;
 }
+
+@media (min-width: @tablet-width) {
+  .features__wrapper {
+    .wrapper(668px);
+  }
+
+  .features__title{
+    .font(43px; 50px; 700);
+    margin-top: 48px;
+  }
+
+  .features__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: -5px;
+    height: 500px;
+  }
+
+  .features__desc {
+    .font(20px; 22px; 700);
+    padding-top: 110px;
+    width: 295px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features__wrapper {
+    .wrapper(700px);
+  }
+
+  .features__title{
+    .font(53px; 57px; 700);
+    margin-top: 55px;
+  }
+}
