@@ -5,3 +5,18 @@
   text-align: center;
   background-color: @grey;
 }
+
+@media (min-width: @tablet-width) {
+  .tagline {
+    .font(43px; 50px; 700);
+    padding-top: 70px;
+    padding-bottom: 100px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .tagline {
+    .padding(100px);
+    .font(53px; 57px; 700);
+  }
+}
