@@ -1,3 +1,17 @@
 .page__footer {
   background-color: @grey;
 }
+
+@media (min-width: @tablet-width) {
+  .page__wrapper {
+    .wrapper(668px);
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page__wrapper {
+    .wrapper(1050px);
+  }
+}
