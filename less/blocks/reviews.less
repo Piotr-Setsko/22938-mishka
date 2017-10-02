@@ -40,5 +40,41 @@
 }
 
 @media (min-width: @tablet-width) {
+  .reviews__wrapper {
+    .wrapper(768px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
+  .reviews__title {
+    order: 1;
+    flex-grow: 2;
+  }
+
+  .reviews__button {
+    order: 2;
+    flex-grow: 2;
+  }
+
+  .reviews__list {
+    order: 3;
+  }
+
+  .slider__buttons {
+    margin-left: auto;
+    order: 4;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    .wrapper(1050px);
+  }
+
+  .reviews__wrapper {
+    padding-left: 175px;
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
