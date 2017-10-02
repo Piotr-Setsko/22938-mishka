@@ -31,3 +31,44 @@
   text-decoration: none;
   border-bottom: 1px solid @color-main;
 }
+
+.contacts__button {
+  .wrapper(260px);
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__wrapper {
+    .wrapper(668px);
+  }
+
+  .contacts__map {
+    width: 100%;
+  }
+
+  .contacts__button {
+    .wrapper(230px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    .wrapper(1050px);
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contacts__wrapper {
+    padding-left: 175px;
+    width: 350px;
+  }
+
+  .contacts__map {
+    width: 525px;
+  }
+
+  .contacts__button {
+    margin: 0;
+    margin-right: auto;
+    padding-left: 175px;
+  }
+}
