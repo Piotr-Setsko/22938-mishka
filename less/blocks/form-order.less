@@ -1,11 +1,13 @@
 .form-order {
   .wrapper(@mobile-wrapper);
+
   @media (min-width: @tablet-width) {
     margin: 0;
     width: 100%;
   }
+
   &--grey {
-      background-color: @grey;
+    background-color: @grey;
   }
 }
 
@@ -14,6 +16,7 @@
     .wrapper(@tablet-wrapper);
     padding-top: 80px;
   }
+
   @media (min-width: @desktop-width) {
     .wrapper(700px);
     padding-top: 112px;
@@ -34,11 +37,13 @@
   margin-top: 30px;
   border: none;
   border-top: 1px solid @color-main;
+
   @media (min-width: @tablet-width) {
     .wrapper(@tablet-wrapper);
     margin-top: 50px;
     border-top: none;
   }
+
   @media (min-width: @desktop-width) {
     .wrapper(@desktop-wrapper);
     margin-top: 50px;
@@ -62,6 +67,7 @@
     flex-direction: column;
     flex-wrap: wrap;
   }
+
   @media (min-width: @desktop-width) {
     padding-left: 115px;
     width: 815px;
@@ -109,6 +115,7 @@
     display: flex;
     justify-content: space-between;
   }
+
   @media (min-width: @desktop-width) {
     .wrapper(700px);
   }
@@ -119,6 +126,7 @@
   margin: 0;
   padding-top: 15px;
   color: @color-text;
+
   @media (min-width: @tablet-width) {
     order: 2;
   }
@@ -129,6 +137,7 @@
   width: @button-width;
   font-family: @font-family;
   background-color: @white;
+
   @media (min-width: @tablet-width) {
     order: 1;
   }

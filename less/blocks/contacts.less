@@ -1,16 +1,18 @@
 .contacts {
   @media (min-width: @desktop-width) {
-  .wrapper(@desktop-wrapper);
-  display: flex;
-  flex-wrap: wrap;
+    .wrapper(@desktop-wrapper);
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
 .contacts__wrapper {
   .wrapper(@mobile-wrapper);
+
   @media (min-width: @tablet-width) {
     .wrapper(@tablet-wrapper);
   }
+
   @media (min-width: @desktop-width) {
     padding-left: 175px;
     width: 350px;
@@ -49,16 +51,19 @@
 
 .contacts__map {
   width: 100%;
+
   @media (min-width: @desktop-width) {
-  width: 50%;
+    width: 50%;
   }
 }
 
 .contacts__button {
   .wrapper(@mobile-wrapper);
+
   @media (min-width: @tablet-width) {
     .wrapper(@button-width);
   }
+
   @media (min-width: @desktop-width) {
     margin: 0;
     margin-right: auto;

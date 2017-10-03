@@ -1,17 +1,19 @@
-  .reviews {
-    @media (min-width: @desktop-width) {
+.reviews {
+  @media (min-width: @desktop-width) {
     .wrapper(@desktop-wrapper);
   }
 }
 
 .reviews__wrapper {
   .wrapper(@mobile-wrapper);
+
   @media (min-width: @tablet-width) {
     .wrapper(@tablet-wrapper);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
   @media (min-width: @desktop-width) {
     padding-left: 175px;
     width: 100%;
@@ -23,6 +25,7 @@
   .font(25px; 30px; 700);
   margin: 0;
   padding-top: 60px;
+
   @media (min-width: @tablet-width) {
     order: 1;
     flex-grow: 2;
@@ -34,7 +37,7 @@
 }
 
 .reviews__list {
-@media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     order: 3;
   }
 }
