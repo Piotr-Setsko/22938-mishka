@@ -4,6 +4,14 @@
 
 .promo__wrapper {
   background: @color-promo url("../img/hero-mobile@1x.jpg") no-repeat -130px -20px;
+  @media (min-width: @tablet-width) {
+    .wrapper(@tablet-width);
+    background: @color-promo url("../img/hero-tablet@1x.jpg") no-repeat;
+  }
+  @media (min-width: @desktop-width) {
+    .wrapper(@desktop-wrapper);
+    background: @color-promo url("../img/hero-desktop@1x.jpg") -100px 0 no-repeat;
+  }
 }
 
 .promo__title {
@@ -11,6 +19,27 @@
   .font(27px; 30px; 700);
   padding: 70px 40px 120px;
   text-align: center;
+  @media (min-width: @tablet-width) {
+    .wrapper(500px);
+    .font(43px; 50px; 700);
+    padding: 153px 0 373px;
+  }
+  @media (min-width: @desktop-width) {
+    .wrapper(640px);
+    .font(53px; 57px; 700);
+    padding: 153px 0 360px;
+  }
+}
+
+.promo__category {
+@media (min-width: @tablet-width) {
+  .font(20px; 30px; 700);
+  .wrapper(@tablet-wrapper);
+  display: flex;
+  }
+  @media (min-width: @desktop-width) {
+    .wrapper(@desktop-wrapper);
+  }
 }
 
 .promo__link {
@@ -27,58 +56,21 @@
   &--toy {
     background-color: @color-second;
   }
-}
 
-.promo__inner {
-  .wrapper(260px);
-}
-
-.promo__item-text {
-  display: block;
-  width: 120px;
-}
-
-@media (min-width: @tablet-width) {
-  .promo__wrapper {
-    .wrapper(768px);
-    background: @color-promo url("../img/hero-tablet@1x.jpg") no-repeat;
-  }
-
-  .promo__inner {
-    padding-left: 38px;
-    width: 100%;
-  }
-
-  .promo__title {
-    .wrapper(500px);
-    .font(43px; 50px; 700);
-    padding: 153px 0 373px;
-  }
-
-  .promo__category {
-    .font(20px; 30px; 700);
-    .wrapper(668px);
-    display: flex;
-  }
-
-  .promo__link {
+  @media (min-width: @tablet-width) {
     flex-grow: 1;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .promo__wrapper {
-    .wrapper(1050px);
-    background: @color-promo url("../img/hero-desktop@1x.jpg") -100px 0 no-repeat;
+.promo__inner {
+  .wrapper(@mobile-wrapper);
+  @media (min-width: @tablet-width) {
+    padding-left: 38px;
+    width: 100%;
   }
+}
 
-  .promo__title {
-    .wrapper(640px);
-    .font(53px; 57px; 700);
-    padding: 153px 0 360px;
-  }
-
-  .promo__category {
-    .wrapper(1050px);
-  }
+.promo__item-text {
+  display: block;
+  width: 46%;
 }

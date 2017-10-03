@@ -5,15 +5,12 @@ body {
   width: 320px;
   font-family: @font-family;
   color: @black;
+  @media (min-width: @tablet-width) {
+      width: 100%;
+  }
 }
 
 img {
   max-width: 100%;
   height: auto;
-}
-
-@media (min-width: @tablet-width) {
-  body {
-    width: 100%;
-  }
 }
