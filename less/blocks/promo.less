@@ -54,10 +54,6 @@
   color: @white;
   text-decoration: none;
 
-  &--interior {
-    background-color: @color-main;
-  }
-
   &--toy {
     background-color: @color-second;
   }
@@ -67,11 +63,18 @@
   }
 }
 
+.promo__link--interior {
+    background-color: @color-main;
+
+  &:hover {
+    background-color: @color-main-hover;
+  }
+}
+
 .promo__inner {
   .wrapper(@mobile-wrapper);
 
   @media (min-width: @tablet-width) {
-    padding-left: 38px;
     width: 100%;
   }
 }
@@ -79,4 +82,8 @@
 .promo__item-text {
   display: block;
   width: 46%;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 38px;
+  }
 }

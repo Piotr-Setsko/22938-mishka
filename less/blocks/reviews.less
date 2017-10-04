@@ -1,6 +1,9 @@
 .reviews {
+  margin-top: 75px;
+
   @media (min-width: @desktop-width) {
     .wrapper(@desktop-wrapper);
+    margin-top: 75px;
   }
 }
 
@@ -12,9 +15,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-top: 77px;
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 70px;
     padding-left: 175px;
     width: 100%;
     box-sizing: border-box;
@@ -24,11 +29,15 @@
 .reviews__title {
   .font(25px; 30px; 700);
   margin: 0;
-  padding-top: 60px;
 
   @media (min-width: @tablet-width) {
+    .font(43px; 50px; 700);
     order: 1;
     flex-grow: 2;
+  }
+
+  @media (min-width: @desktop-width)  {
+    .font(53px; 57px; 700);
   }
 }
 
@@ -37,8 +46,15 @@
 }
 
 .reviews__list {
+  padding-top: 23px;
+
   @media (min-width: @tablet-width) {
     order: 3;
+    padding-top: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 90%;
   }
 }
 
@@ -46,13 +62,17 @@
 .reviews__text {
   .font(15px; 30px; 400);
   margin: 0;
-  padding-top: 35px;
   color: @color-text;
+
+  @media (min-width: @tablet-width) {
+    .font(17px; 30px; 400);
+  }
 }
 
 .rewiews__author-name {
   display: block;
-  padding-top: 30px;
+  padding-top: 26px;
+  font-style: normal;
 
   &--nick {
     .font(17px; 30px; 400);
@@ -60,26 +80,61 @@
     padding-top: 5px;
     color: @color-text;
   }
-}
 
-.slider__buttons {
   @media (min-width: @tablet-width) {
-    margin-left: auto;
-    order: 4;
+  .font(18px; 24px; 700);
+  padding-top: 57px;
   }
 }
 
-.reviews__prew {
-  margin-top: 33px;
+.reviews__slider-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+  border: 1px solid @grey-border;
+
+  &--prew {
+    .slider-button();
+    background-image: url("../img/icon-left-arrow.svg");
+    border-right: 1px solid @grey-border;
+  }
+
+  &--next {
+    .slider-button();
+    background-image: url("../img/icon-right-arrow.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    order: 4;
+    margin-top: -43px;
+    margin-right: 20px;
+    margin-left: auto;
+    width: 137px;
+    border: none;
+
+    &--prew {
+      padding: 0;
+      border-right: none;
+      background-position: 0 0;
+    }
+
+    &--next {
+      background-position: 100% 0;
+    }
+  }
 }
 
 .reviews__button {
+  margin-top: 36px;
+  box-sizing: border-box;
+
   @media (min-width: @tablet-width) {
     order: 2;
+    margin-top: -25px;
     width: 175px;
   }
-}
 
-.reviews__write {
-  margin-top: 38px;
+  @media (min-width: @desktop-width)  {
+    margin-top: -18px;
+  }
 }
