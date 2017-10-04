@@ -1,5 +1,11 @@
 .reviews {
-  margin-top: 75px;
+  margin-top: 55px;
+
+  &::after {
+    .background-zigzag();
+    margin-top: 44px;
+    background-image: url("../img/zigzag-line-desktop.png");
+  }
 
   @media (min-width: @desktop-width) {
     .wrapper(@desktop-wrapper);
@@ -58,7 +64,6 @@
   }
 }
 
-
 .reviews__text {
   .font(15px; 30px; 400);
   margin: 0;
@@ -71,7 +76,7 @@
 
 .rewiews__author-name {
   display: block;
-  padding-top: 26px;
+  padding-top: 27px;
   font-style: normal;
 
   &--nick {
@@ -85,12 +90,17 @@
   .font(18px; 24px; 700);
   padding-top: 57px;
   }
+
+  @media (min-width: @desktop-width) {
+  .font(17px; 24px; 700);
+  padding-top: 39px;
+  }
 }
 
 .reviews__slider-buttons {
   display: flex;
   justify-content: center;
-  margin-top: 28px;
+  margin-top: 27px;
   border: 1px solid @grey-border;
 
   &--prew {

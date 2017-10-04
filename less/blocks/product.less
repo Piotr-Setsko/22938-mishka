@@ -1,5 +1,12 @@
 .product {
-  .wrapper(@mobile-wrapper);
+    .wrapper(@mobile-wrapper);
+    margin-top: 30px;
+
+    &::after {
+      .background-zigzag();
+      margin-top: 35px;
+      background-image: url("../img/zigzag-line-desktop.png");
+    }
 
   @media (min-width: @tablet-width) {
     .wrapper(@tablet-wrapper);
@@ -31,7 +38,6 @@
 
 .product__title {
   .font(25px; 30px; 700);
-  margin-top: 26px;
 
   @media (min-width: @tablet-width) {
     .font(43px;50px; 700);
@@ -46,7 +52,7 @@
 
 .product__top {
   display: block;
-  padding-top: 5px;
+  margin-top: -15px;
   line-height: 20px;
   color: @color-main;
   text-transform: uppercase;
@@ -93,7 +99,7 @@
 
 .product__list {
   .font(15px; 24px; 400);
-  margin-top: 20px;
+  margin-top: 19px;
   width: @mobile-wrapper;
   color: @color-text;
   border-collapse: collapse;
@@ -127,7 +133,7 @@
 }
 
 .product__value {
-  padding-left: 16px;
+  padding-left: 18px;
 
   @media (min-width: @tablet-width) {
     padding-left: 0;

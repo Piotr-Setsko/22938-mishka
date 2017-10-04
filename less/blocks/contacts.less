@@ -1,4 +1,5 @@
 .contacts {
+  padding-top: 37px;
   @media (min-width: @desktop-width) {
     .wrapper(@desktop-wrapper);
     display: flex;
@@ -22,7 +23,6 @@
 .contacts__title {
   .font(18px; 30px; 700);
   margin: 0;
-  padding-top: 40px;
 }
 
 .contacts__list {
@@ -35,11 +35,12 @@
 .contacts__field {
   .padding(15px);
   vertical-align: top;
+  width: 60px;
 }
 
 .contacts__value {
   .padding(15px);
-  padding-left: 28px;
+  padding-left: 15px;
 }
 
 .contacts__link-email {
@@ -50,6 +51,7 @@
 }
 
 .contacts__map {
+  padding-top: 22px;
   width: 100%;
 
   @media (min-width: @desktop-width) {
@@ -59,6 +61,8 @@
 
 .contacts__button {
   .wrapper(@mobile-wrapper);
+  .font(18px; 20px; 700);
+  margin-top: 36px;
 
   @media (min-width: @tablet-width) {
     .wrapper(@button-width);

@@ -38,6 +38,7 @@
 
 .main-nav__button {
   position: absolute;
+  top: 32px;
   right: 30px;
   z-index: 2;
   display: block;
@@ -61,7 +62,7 @@
 .main-nav--opened .site-list {
   @media (max-width: @mobile-width-only) {
     position: absolute;
-    top: 68px;
+    top: 80px;
     right: 0;
     z-index: 10;
   }
@@ -70,31 +71,32 @@
 .main-nav--opened .user-list {
   @media (max-width: @mobile-width-only) {
     position: absolute;
-    top: 244px;
+    top: 240px;
     right: 0;
     z-index: 10;
   }
 }
 
 .main-nav--closed .main-nav__button {
-  top: 26px;
   background-image: url("../img/icon-menu-open.svg");
 }
 
 .main-nav--closed .site-list__item {
   @media (max-width: @mobile-width-only) {
     display: none;
+  }
+}
 
-    &--active {
-      display: block;
-    }
+.main-nav--closed .user-list__item {
+    @media (max-width: @mobile-width-only) {
+    display: none;
   }
 }
 
 .main-nav--nojs .main-nav__wrapper {
   @media (max-width: @mobile-width-only) {
     position: static;
-    min-height: 0;
+    display: block;
   }
 }
 
@@ -107,16 +109,6 @@
 .main-nav--nojs .user-list__item {
   @media (max-width: @mobile-width-only) {
     display: block;
-  }
-}
-
-  .main-nav--closed .user-list__item {
-    @media (max-width: @mobile-width-only) {
-    display: none;
-
-    &--active {
-      display: block;
-    }
   }
 }
 
