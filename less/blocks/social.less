@@ -3,6 +3,10 @@
 }
 
 .social__wrapper {
-  .wrapper(260px);
-  border-bottom: 1px solid #ececec;
+  .wrapper(@mobile-wrapper);
+  border-bottom: 1px solid @grey-border;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }

@@ -1,5 +1,26 @@
 .form-order {
-  .wrapper(260px);
+  .wrapper(@mobile-wrapper);
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    width: 100%;
+  }
+
+  &--grey {
+    background-color: @grey;
+  }
+}
+
+.form-order__wrapper {
+  @media (min-width: @tablet-width) {
+    .wrapper(@tablet-wrapper);
+    padding-top: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper(700px);
+    padding-top: 112px;
+  }
 }
 
 .form-order__text {
@@ -16,12 +37,42 @@
   margin-top: 30px;
   border: none;
   border-top: 1px solid @color-main;
+
+  @media (min-width: @tablet-width) {
+    .wrapper(@tablet-wrapper);
+    margin-top: 50px;
+    border-top: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper(@desktop-wrapper);
+    margin-top: 50px;
+    padding-left: 60px;
+    box-sizing: border-box;
+  }
 }
 
 .form-order__title {
   .font(17px; 16px; 700);
   padding-right: 30px;
   color: @color-main;
+}
+
+.form-order__main {
+  @media (min-width: @tablet-width) {
+    margin-top: -16px;
+    padding-left: 166px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 115px;
+    width: 815px;
+    box-sizing: border-box;
+  }
 }
 
 .form-order__label-radio {
@@ -48,12 +99,26 @@
   .padding(17px);
   width: 260px;
   border: 0;
+  background-color: inherit;
   box-sizing: border-box;
-  box-shadow: inset 0 -2px #000000;
+  box-shadow: inset 0 -2px @black;
 }
 
 .form-order__textarea {
   margin-top: 20px;
+}
+
+.form-order__footer {
+  @media (min-width: @tablet-width) {
+    .wrapper(@tablet-wrapper);
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper(700px);
+  }
 }
 
 .form-order__text-required {
@@ -61,11 +126,19 @@
   margin: 0;
   padding-top: 15px;
   color: @color-text;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
 }
 
 .form-order__button {
   .font(17px; 16px; 700);
-  width: 260px;
+  width: @button-width;
   font-family: @font-family;
   background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
 }

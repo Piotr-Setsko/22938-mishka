@@ -1,16 +1,17 @@
-.page {
-  .font();
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  font-family: @font-family;
-  color: @black;
-}
-
-.page__inner {
-  .wrapper(320px);
-}
-
 .page__footer {
+  margin-top: 39px;
   background-color: @grey;
+}
+
+
+.page__wrapper {
+  @media (min-width: @tablet-width) {
+    .wrapper(@tablet-wrapper);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper(@desktop-wrapper);
+  }
 }

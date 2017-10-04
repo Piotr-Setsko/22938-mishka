@@ -2,4 +2,16 @@
   .padding(22px);
   display: inline-block;
   vertical-align: top;
+
+  &--footer {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 100px;
+
+    &--footer {
+      display: block;
+    }
+  }
 }
