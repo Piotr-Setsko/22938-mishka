@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Mishka - Главная</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page">
     <header class="page__header">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrapper">
           <div class="main-nav__inner">
             <a class="logo">
               <img class="logo__image" src="#" width="86" height="35" alt="Mishka">
             </a>
-            <button class="main-nav__button" type="button">Открыть меню</button>
+            <button class="main-nav__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
           </div>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
@@ -202,5 +201,6 @@
       </section>
     </div>
   </footer>
+  <script src="js/main-menu.js"></script>
 </body>
 </html>
