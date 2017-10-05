@@ -4,8 +4,18 @@
   &::after {
     .background-zigzag();
     margin-top: 44px;
+    //Временная картинка
     background-image: url("../img/zigzag-line-desktop.png");
   }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 86px;
+
+    &::after {
+      //До появления графики
+      margin-top: 110px;
+  }
+}
 
   @media (min-width: @desktop-width) {
     .wrapper(@desktop-wrapper);
@@ -21,7 +31,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 77px;
+    padding-top: 75px;
   }
 
   @media (min-width: @desktop-width) {
