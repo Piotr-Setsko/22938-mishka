@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 57px;
+    margin-top: 58px;
   }
 }
 
@@ -29,6 +29,7 @@
     .wrapper(@tablet-wrapper);
     order: 2;
     border: solid 1px @grey-border;
+    box-sizing: border-box;
 
     &--header {
       border-bottom: none;
@@ -40,12 +41,13 @@
   }
 
   @media (min-width: @desktop-width) {
-    .wrapper(230px);
+    .wrapper(366px);
 
-    &:last-child {
+    &--main {
       margin: 0;
-      margin-top: -370px;
+      margin-top: -283px;
       margin-left: auto;
+      padding-left: 20px;
     }
   }
 }
@@ -59,7 +61,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 65%;
+    width: 683px;
     height: 455px;
   }
 }
@@ -73,8 +75,15 @@
   @media (min-width: @tablet-width) {
     .wrapper(584px);
     .font(20px; 24px; 700);
-    padding-top: 35px;
-    padding-left: 70px;
+    padding-top: 38px;
+    padding-left: 65px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper(230px);
+    padding-top: 95px;
+    padding-left: 10px;
   }
 }
 
@@ -86,6 +95,12 @@
 
   @media (min-width: @tablet-width) {
     .wrapper(584px);
+    .font(15px; 30px; 400);
+    padding-top: 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper(230px);
   }
 }
 
@@ -94,6 +109,14 @@
 
   @media (min-width: @tablet-width) {
     .wrapper(584px);
+    margin-top: 35px;
+    margin-bottom: 45px;
     box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper(230px);
+    margin-top: 45px;
+
   }
 }
