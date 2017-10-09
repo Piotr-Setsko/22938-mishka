@@ -10,7 +10,7 @@
     width: 100%;
 
     &--grey {
-      margin-bottom: 0px;
+      margin-bottom: 0;
       background-color: @grey;
     }
   }
@@ -63,7 +63,7 @@
 
   @media (min-width: @desktop-width) {
     .wrapper(@desktop-wrapper);
-    margin-top: 0px;
+    margin-top: 0;
     padding-left: 60px;
     box-sizing: border-box;
   }
@@ -118,7 +118,7 @@
 
 .form-order__label-radio {
   padding-top: 15px;
-  padding-bottom: 0px;
+  padding-bottom: 0;
   display: block;
   vertical-align: middle;
 
@@ -269,9 +269,9 @@
   }
 
   &--tel {
-  padding-top: 12px;
-  padding-bottom: 16px;
-  width: inherit;
+    padding-top: 12px;
+    padding-bottom: 16px;
+    width: inherit;
   }
 
   &--email {
@@ -312,10 +312,11 @@
     width: auto;
     height: 125px;
 
-      &::placeholder {
-        .font(19px; 18px; 400);
+    &::placeholder {
+      .font(19px; 18px; 400);
     }
   }
+
   @media (min-width: @desktop-width) {
     height: 123px;
   }
@@ -348,6 +349,7 @@
     padding-top: 20px;
     order: 2;
   }
+
   @media (min-width: @desktop-width) {
     padding-top: 18px;
   }
