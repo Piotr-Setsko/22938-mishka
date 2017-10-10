@@ -8,4 +8,13 @@
   text-transform: uppercase;
   text-align: center;
   border: 2px solid @blackLighter;
+
+  &:hover {
+    color: @white;
+    background-color: @blackLighter;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+  }
 }
