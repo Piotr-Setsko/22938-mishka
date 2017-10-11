@@ -145,8 +145,7 @@
 }
 
 .form-order__input-radio {
-
-  &+ .form-order__label-radio::before {
+  & + .form-order__label-radio::before {
     content: "";
     display: inline-block;
     vertical-align: middle;
@@ -163,7 +162,7 @@
     box-shadow: 0 0 0 2px @green;
   }
 
-  &+ .form-order__label-radio:hover::before  {
+  & + .form-order__label-radio:hover::before {
     box-shadow: 0 0 0 2px @green;
   }
 
@@ -174,13 +173,12 @@
     border: 10px solid @white;
   }
 
-  &:active + .form-order__label-radio::before  {
+  &:active + .form-order__label-radio::before {
     box-shadow: 0 0 0 2px fade(@blackLighter, 30%);
   }
 
   @media (min-width: @tablet-width) {
-
-    &+ .form-order__label-radio::before {
+    & + .form-order__label-radio::before {
       margin-bottom: 4px;
       width: 48px;
       height: 48px;
@@ -233,7 +231,7 @@
 }
 
 .form-order__input-checkbox {
-  &+ .form-order__label-checkbox::before {
+  & + .form-order__label-checkbox::before {
     content: "";
     display: inline-block;
     vertical-align: middle;
@@ -248,7 +246,7 @@
     border: 2px solid @green;
   }
 
-  &+ .form-order__label-checkbox:hover::before  {
+  & + .form-order__label-checkbox:hover::before {
     border: 2px solid @green;
   }
 
@@ -256,13 +254,12 @@
     background: url("../img/icon-tick.svg") no-repeat 4px 7px;
   }
 
-  &:active + .form-order__label-checkbox::before  {
+  &:active + .form-order__label-checkbox::before {
     border: 2px solid fade(@blackLighter, 30%);
   }
 
   @media (min-width: @tablet-width) {
-
-    &+ .form-order__label-checkbox::before {
+    & + .form-order__label-checkbox::before {
       margin-top: 0;
       margin-bottom: 2px;
       width: 50px;
