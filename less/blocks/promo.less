@@ -36,6 +36,8 @@
 }
 
 .promo__category {
+  position: relative;
+
   @media @tablet {
     .font(20px; 30px; 700);
     .wrapper(@tablet-wrapper);
@@ -54,20 +56,31 @@
   color: @white;
   text-decoration: none;
 
+  &--interior {
+    background-color: @green;
+  }
+
   &--toy {
+    top: 0;
+    right: 0;
     background-color: @greenSecond;
   }
 
   @media @tablet {
+    position: absolute;
     width: 50%;
-  }
-}
 
-.promo__link--interior {
-  background-color: @green;
+    &--interior:hover {
+      background-color: @greenLighter;
+      top: -5px;
+      padding-bottom: 33px;
+    }
 
-  &:hover {
-    background-color: @greenLighter;
+    &--toy:hover {
+      top: -5px;
+      padding-bottom: 33px;
+    }
+
   }
 }
 
