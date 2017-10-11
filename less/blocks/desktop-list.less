@@ -2,7 +2,7 @@
   .reset();
   display: none;
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     display: flex;
     justify-content: flex-start;
     order: 4;
@@ -11,7 +11,7 @@
 }
 
 .desktop-list__item {
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     .font(15px; 24px; 700);
     padding-top: 17px;
     padding-left: 50px;
@@ -20,7 +20,7 @@
 }
 
 .desktop-list__link {
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     color: @black;
     text-decoration: none;
   }

@@ -1,7 +1,7 @@
 .user-list {
   .reset();
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: flex;
     justify-content: flex-end;
     order: 2;
@@ -23,7 +23,7 @@
     color: fade(@black, 30%);
   }
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     box-shadow: none;
 
     &--search {
@@ -36,7 +36,7 @@
 .user-list__link {
   .site-list__link;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .padding(32px);
     .font(17px; 24px; 700);
     margin: 0;
@@ -52,7 +52,7 @@
     }
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     &--basket {
       width: 265px;
       box-sizing: border-box;

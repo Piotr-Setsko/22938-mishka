@@ -9,7 +9,7 @@
     background-image: url("../img/zigzag-line-desktop.png");
   }
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .wrapper(@tablet-wrapper);
     display: flex;
     flex-wrap: wrap;
@@ -20,7 +20,7 @@
     }
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     .wrapper(@desktop-wrapper);
 
     &::after {
@@ -31,13 +31,13 @@
 
 
 .product__header {
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: flex;
     justify-content: space-between;
     width: 100%;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     display: flex;
     justify-content: flex-start;
     margin-top: 80px;
@@ -49,11 +49,11 @@
 .product__title {
   .font(25px; 30px; 700);
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .font(43px;50px; 700);
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     .font(53px; 57px; 700);
     order: 2;
     margin-left: 28px;
@@ -67,7 +67,7 @@
   color: @green;
   text-transform: uppercase;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .font(17px;17px; 700);
     margin-top: 0;
     padding-top: 47px;
@@ -75,18 +75,18 @@
     width: 120px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding-top: 60px;
     order: 1;
   }
 }
 
 .product__main {
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     width: 292px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding-left: 175px;
   }
 }
@@ -97,13 +97,13 @@
   padding-top: 23px;
   color: @blackLighter;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .font(17px; 30px; 400);
     padding-top: 13px;
     padding-left: 2px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding-top: 5px;
   }
 }
@@ -115,12 +115,12 @@
   color: @blackLighter;
   border-collapse: collapse;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     width: 100%;
     margin-top: 37px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     margin-top: 50px;
   }
 }
@@ -132,13 +132,13 @@
 .product__field {
   padding: 7px 0;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding-top: 7px;
     padding-bottom: 8px;
     padding-left: 5px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding: 7px 0;
     padding-left: 2px;
   }
@@ -147,11 +147,11 @@
 .product__value {
   padding-left: 18px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding-left: 0;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding-left: 0;
   }
 }
@@ -159,7 +159,7 @@
 .product__img {
   padding-top: 30px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding-top: 20px;
     padding-left: 40px;
     // До подстановки адоптивной графики
@@ -167,7 +167,7 @@
     height: 404px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     margin-top: -155px;
     padding-top: 0;
     padding-left: 58px;
@@ -179,12 +179,12 @@
 }
 
 .product__footer {
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     margin-top: -125px;
     width: 44%;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     width: 28%;
     margin-top: -125px;
     padding-left: 175px;
@@ -197,13 +197,13 @@
   color: @blackLighter;
   text-align: center;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .font(20px; 24px; 700);
   }
 }
 
 .product__order {
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     margin-top: 34px;
   }
 }

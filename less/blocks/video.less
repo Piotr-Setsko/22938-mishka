@@ -5,7 +5,7 @@
   width: @mobile-wrapper;
   border: solid 1px @greyDark;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .wrapper(@tablet-wrapper);
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@
     border: none;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     .wrapper(@desktop-wrapper);
     display: flex;
     flex-direction: row;
@@ -25,7 +25,7 @@
 .video__wrapper {
   .wrapper(192px);
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .wrapper(@tablet-wrapper);
     order: 2;
     border: solid 1px @greyDark;
@@ -40,7 +40,7 @@
     }
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     .wrapper(366px);
 
     &--main {
@@ -55,14 +55,14 @@
 }
 
 .video__player {
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     order: 1;
     padding: 0;
     width: @tablet-wrapper;
     height: 455px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     width: 683px;
     height: 455px;
   }
@@ -74,7 +74,7 @@
   margin: 0;
   padding-left: 58px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .wrapper(584px);
     .font(20px; 24px; 700);
     padding-top: 38px;
@@ -82,7 +82,7 @@
     box-sizing: border-box;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     .wrapper(230px);
     padding-top: 95px;
     padding-left: 10px;
@@ -95,13 +95,13 @@
   padding-top: 20px;
   color: @blackLighter;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .wrapper(584px);
     .font(15px; 30px; 400);
     padding-top: 7px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     .wrapper(230px);
   }
 }
@@ -109,14 +109,14 @@
 .video__order {
   margin-bottom: 33px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .wrapper(584px);
     margin-top: 35px;
     margin-bottom: 45px;
     box-sizing: border-box;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     .wrapper(230px);
     margin-top: 45px;
   }

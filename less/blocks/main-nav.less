@@ -11,7 +11,7 @@
   }
 
   &--opened .site-list {
-    @media (max-width: @mobile-width-only) {
+    @media @mobile-only {
       position: absolute;
       top: 80px;
       right: 0;
@@ -20,13 +20,13 @@
   }
 
   &--closed .site-list__item {
-    @media (max-width: @mobile-width-only) {
+    @media @mobile-only {
       display: none;
     }
   }
 
   &--opened .user-list {
-    @media (max-width: @mobile-width-only) {
+    @media @mobile-only {
       position: absolute;
       top: 240px;
       right: 0;
@@ -35,40 +35,40 @@
   }
 
   &--closed .user-list__item {
-    @media (max-width: @mobile-width-only) {
+    @media @mobile-only {
       display: none;
     }
   }
 
   &--nojs .main-nav__wrapper {
-    @media (max-width: @mobile-width-only) {
+    @media @mobile-only {
       position: static;
       display: block;
     }
   }
 
   &--nojs .site-list__item {
-    @media (max-width: @mobile-width-only) {
+    @media @mobile-only {
       display: block;
     }
   }
 
   &--nojs .user-list__item {
-    @media (max-width: @mobile-width-only) {
+    @media @mobile-only {
       display: block;
     }
   }
 }
 
 .main-nav__wrapper {
-  @media (min-width: @tablet-width) {
-    .wrapper(@tablet-width);
+  @media @tablet {
+    .wrapper(768px);
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     .wrapper(1150px);
     justify-content: flex-start;
   }
@@ -79,7 +79,7 @@
   display: flex;
   justify-content: center;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     justify-content: flex-start;
     margin: 0;
     padding-left: 50px;
@@ -87,7 +87,7 @@
     border-bottom: 1px solid @greyDark;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     justify-content: center;
     order: 2;
     padding-left: 0;
@@ -107,7 +107,7 @@
   cursor: pointer;
   border: transparent;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: none;
   }
 }
@@ -115,7 +115,7 @@
 .main-nav__delivery {
   display: none;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .font(15px; 24px; 400);
     .padding(17px);
     display: block;
@@ -128,7 +128,7 @@
     order: 4;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding-right: 50px;
   }
 }

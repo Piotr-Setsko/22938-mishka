@@ -5,12 +5,12 @@
 .promo__wrapper {
   background: @whiteDarker url("../img/hero-mobile@1x.jpg") no-repeat -127px -20px;
 
-  @media (min-width: @tablet-width) {
-    .wrapper(@tablet-width);
+  @media @tablet {
+    .wrapper(768px);
     background: @whiteDarker url("../img/hero-tablet@1x.jpg") no-repeat;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     .wrapper(@desktop-wrapper);
     background: @whiteDarker url("../img/hero-desktop@1x.jpg") -100px 0 no-repeat;
   }
@@ -22,13 +22,13 @@
   padding: 70px 40px 121px;
   text-align: center;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .wrapper(500px);
     .font(43px; 50px; 700);
     padding: 153px 0 373px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     .wrapper(640px);
     .font(53px; 57px; 700);
     padding: 153px 0 360px;
@@ -36,13 +36,13 @@
 }
 
 .promo__category {
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .font(20px; 30px; 700);
     .wrapper(@tablet-wrapper);
     display: flex;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     .wrapper(@desktop-wrapper);
   }
 }
@@ -58,7 +58,7 @@
     background-color: @greenSecond;
   }
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     width: 50%;
   }
 }
@@ -74,7 +74,7 @@
 .promo__inner {
   .wrapper(@mobile-wrapper);
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     width: 100%;
   }
 }
@@ -83,11 +83,11 @@
   display: block;
   width: 46%;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding-left: 38px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     width: 30%;
   }
 }

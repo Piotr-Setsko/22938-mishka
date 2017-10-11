@@ -7,7 +7,7 @@
 .modal-order__wrapper {
   .wrapper(@mobile-wrapper);
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .wrapper(360px);
   }
 }
@@ -18,7 +18,7 @@
   padding-top: 36px;
   text-align: center;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .font(30px; 57px; 700);
     padding-top: 48px;
   }
@@ -30,7 +30,7 @@
   padding-top: 20px;
   text-align: center;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .font(17px; 30px; 400);
     padding-top: 20px;
   }

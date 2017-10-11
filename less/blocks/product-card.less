@@ -1,9 +1,9 @@
 .products-list__wrapper {
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     margin-top: 81px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     .wrapper(@desktop-wrapper);
     display: flex;
     justify-content: space-between;
@@ -17,14 +17,14 @@
   width: @mobile-wrapper;
   border: solid 1px @greyDark;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .wrapper(@tablet-wrapper);
     display: flex;
     margin-top: 54px;
     border: none;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     margin: 0;
     margin-top: 54px;
     display: block;
@@ -33,13 +33,13 @@
 }
 
 .product-card__picture {
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: block;
     width: 50%;
     height: 334px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     display: block;
     width: 100%;
     height: 462px;
@@ -49,7 +49,7 @@
 .product-card__wrapper {
   .wrapper(200px);
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -57,7 +57,7 @@
     border: solid 1px @greyDark;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     .wrapper(316px);
     box-sizing: border-box;
     min-height: 197px;
@@ -65,7 +65,7 @@
 }
 
 .product-card__header {
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .wrapper(268px);
   }
 }
@@ -76,13 +76,13 @@
   color: @black;
   text-decoration: none;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .font(20px; 24px; 700);
     margin-left: -5px;
     padding-top: 25px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     margin-left: 4px;
   }
 }
@@ -94,13 +94,13 @@
   padding-bottom: 20px;
   color: @blackLighter;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .font(15px; 30px; 400);
     margin-left: -5px;
     padding-top: 5px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     margin-left: 3px;
     padding-bottom: 0;
   }
@@ -110,12 +110,12 @@
   padding-bottom: 28px;
   border-top: 1px solid @greyDark;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .wrapper(268px);
     padding-bottom: 25px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     .wrapper(256px);
     display: flex;
   }
@@ -126,12 +126,12 @@
   padding-top: 20px;
   font-size: 15px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .font();
     padding-top: 23px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     align-self: flex-end;
     margin-left: -3px;
     padding-top: 22px;
