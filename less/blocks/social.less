@@ -18,5 +18,26 @@
   display: block;
   width: 27px;
   height: 30px;
-  border: 1px solid @black;
+
+  &--instagram {
+    padding-top: 2px;
+    padding-left: 2px;
+  }
+
+  &--twitter {
+    padding-top: 2px;
+  }
+
+  &:hover {
+    fill: @greenSecondLighter;
+  }
+
+  &:focus {
+    fill: @greenSecondLighter;
+    outline: none;
+  }
+
+  &:active {
+    fill: fade(@greenSecondLighter, 30%);
+  }
 }
