@@ -118,15 +118,40 @@
   margin-top: 27px;
   border: 1px solid @greyDark;
 
+
   &--prew {
     .slider-button();
     background-image: url("../img/icon-left-arrow.svg");
     border-right: 1px solid @greyDark;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   &--next {
     .slider-button();
     background-image: url("../img/icon-right-arrow.svg");
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   @media @tablet {

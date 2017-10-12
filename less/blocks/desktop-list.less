@@ -11,6 +11,14 @@
 }
 
 .desktop-list__item {
+  &:hover .desktop-list__link {
+    color: fade(@black, 60%);
+  }
+
+  &:active .desktop-list__link {
+    color: fade(@black, 30%);
+  }
+
   @media @desktop {
     .font(15px; 24px; 700);
     padding-top: 17px;
@@ -20,6 +28,10 @@
 }
 
 .desktop-list__link {
+  &:focus {
+    color: fade(@black, 60%);
+  }
+
   @media @desktop {
     color: @black;
     text-decoration: none;

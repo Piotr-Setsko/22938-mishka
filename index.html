@@ -27,13 +27,18 @@
             <li class="user-list__item user-list__item--search">
               <a class="user-list__link user-list__link--search" href="#">
                 <svg class="user-list__pict" width="27" height="22">
-                <use xlink:href="img/header-sprite.svg#search"></use>
+                  <use xlink:href="img/header-sprite.svg#search"></use>
                 </svg>
                 <span>Поиск по сайту</span>
               </a>
             </li>
             <li class="user-list__item user-list__item--basket">
-              <a class="user-list__link user-list__link--basket" href="#">Корзина: пока пуста</a>
+              <a class="user-list__link user-list__link--basket" href="#">
+                <svg class="user-list__pict" width="27" height="22">
+                  <use xlink:href="img/header-sprite.svg#cart"></use>
+                </svg>
+                <span>Корзина: пока пуста</span>
+              </a>
             </li>
           </ul>
           <ul class="main-nav__list desktop-list">
@@ -56,11 +61,17 @@
           <a class="promo__link promo__link--interior" href="interior.html">
             <div class="promo__inner">
               <b class="promo__item-text promo__item-text--interior">Предметы интерьера</b>
+              <svg class="promo__pict promo__pict--interior" width="40" height="62">
+                <use xlink:href="img/promo-sprite.svg#interior"></use>
+              </svg>
             </div>
           </a>
           <a class="promo__link promo__link--toy" href="toy.html">
             <div class="promo__inner">
               <b class="promo__item-text promo__item-text--toy">Детские игрушки</b>
+              <svg class="promo__pict promo__pict--toy" width="60" height="59">
+                <use xlink:href="img/promo-sprite.svg#toy"></use>
+              </svg>
             </div>
           </a>
         </div>
@@ -228,7 +239,8 @@
       <section class="copyright">
         <div class="copyright__wrapper">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">
-            <p class="copyright__text">Разработано</p><svg class="copyright__pict" width="30" height="35">
+            <p class="copyright__text">Разработано</p>
+            <svg class="copyright__pict" width="30" height="35">
               <use xlink:href="img/footer-sprite.svg#logo-htmlacademy"></use>
             </svg>
             <span class="visually-hidden">"HTML Academy"</span>

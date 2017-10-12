@@ -55,16 +55,38 @@
 }
 
 .video__player {
+  width: 100%;
+  position: relative;
+
+  & video {
+    margin-bottom: -5px;
+  }
+
   @media @tablet {
     order: 1;
-    padding: 0;
-    width: @tablet-wrapper;
-    height: 455px;
+
+    & video {
+      padding: 0;
+      width: @tablet-wrapper;
+      height: 455px;
+    }
   }
 
   @media @desktop {
     width: 683px;
-    height: 455px;
+
+    & video {
+      width: 683px;
+      height: 455px;
+    }
+  }
+}
+
+.video__pict {
+
+  &--play {
+    position: absolute;
+    padding: 37px 75px;
   }
 }
 
@@ -72,7 +94,6 @@
   .padding(25px);
   .font(17px; 24px; 700);
   margin: 0;
-  padding-left: 58px;
 
   @media @tablet {
     .wrapper(584px);

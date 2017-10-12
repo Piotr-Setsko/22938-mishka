@@ -94,6 +94,21 @@
   color: @blackLighter;
   text-decoration: none;
   border-bottom: 1px solid @green;
+
+  &:hover {
+    border-bottom: 1px solid @greenSecondLighter;
+    color: @greenSecondLighter;
+  }
+
+  &:focus {
+    border-bottom-color: @greenSecondLighter;
+    color: @greenSecondLighter;
+  }
+
+  &:active {
+    border-bottom-color: fade(@greenSecondLighter, 10%);
+    color: fade(@greenSecondLighter, 30%);
+  }
 }
 
 .contacts__map {

@@ -19,8 +19,14 @@
     color: fade(@black, 60%);
   }
 
+  &:hover svg {
+    fill: @green;
+    opacity: 1;
+  }
+
   &:active .user-list__link {
     color: fade(@black, 30%);
+    opacity: 0.3;
   }
 
   @media @tablet {
@@ -35,6 +41,14 @@
 
 .user-list__link {
   .site-list__link;
+  display: flex;
+  justify-content: flex-start;
+
+  & svg {
+    padding-left: 34px;
+    padding-right: 25px;
+    opacity: 0.2;
+  }
 
   @media @tablet {
     .padding(32px);
