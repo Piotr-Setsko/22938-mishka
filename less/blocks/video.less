@@ -5,6 +5,14 @@
   width: @mobile-wrapper;
   border: solid 1px @greyDark;
 
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+
   @media @tablet {
     .wrapper(@tablet-wrapper);
     display: flex;
