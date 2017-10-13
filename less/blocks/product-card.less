@@ -1,77 +1,202 @@
+.products-list__wrapper {
+  @media @tablet {
+    margin-top: 81px;
+  }
+
+  @media @desktop {
+    .wrapper(@desktop-wrapper);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 75px;
+  }
+}
+
 .product-card {
   margin: 0 auto;
   margin-top: 30px;
   width: @mobile-wrapper;
-  border: solid 1px @grey-border;
+  border: solid 1px @greyDark;
 
-  @media (min-width: @tablet-width) {
+  &:hover .product-card__wrapper {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  @media @tablet {
     .wrapper(@tablet-wrapper);
     display: flex;
     margin-top: 54px;
+    border: none;
+
+    &:hover .product-card__wrapper {
+      box-shadow: 6px 0 10px 0 rgba(0, 0, 0, 0.1);
+    }
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     margin: 0;
     margin-top: 54px;
     display: block;
     width: 30%;
-  }
-}
 
-.products-list__wrapper {
-  @media (min-width: @desktop-width) {
-    .wrapper(@desktop-wrapper);
-    display: flex;
-    justify-content: space-between;
+    &:hover .product-card__wrapper {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
   }
 }
 
 .product-card__picture {
-  @media (min-width: @tablet-width) {
+  &:active ~ .product-card__wrapper {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  @media @tablet {
     display: block;
     width: 50%;
     height: 334px;
+
+    &:active ~ .product-card__wrapper {
+      box-shadow: 3px 0 5px 0 rgba(0, 0, 0, 0.1);
+    }
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     display: block;
     width: 100%;
     height: 462px;
+
+    &:active ~ .product-card__wrapper {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    }
   }
 }
 
 .product-card__wrapper {
-  .wrapper(200px);
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    width: 50%;
+    border: solid 1px @greyDark;
+  }
+
+  @media @desktop {
+    .wrapper(316px);
+    box-sizing: border-box;
+    min-height: 197px;
   }
 }
 
 .product-card__link {
+  .wrapper(200px);
   display: block;
-  padding-top: 30px;
+  padding-top: 20px;
   color: @black;
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:hover ~ .product-card__footer > .product-card__pict {
+    fill: @green;
+    opacity: 1;
+  }
+
+  &:active ~ .product-card__footer > .product-card__pict {
+    fill: @green;
+    opacity: 0.3;
+  }
+
+  @media @tablet {
+    .wrapper(280px);
+    .font(20px; 24px; 700);
+    padding-top: 25px;
+  }
+
+  @media @desktop {
+    .wrapper(256px);
+  }
 }
 
 .product-card__desc {
+  .wrapper(200px);
   .font(13px; 30px; 400);
-  margin: 0;
-  padding-top: 15px;
-  padding-bottom: 25px;
-  color: @color-text;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  color: @blackLighter;
+
+  @media @tablet {
+    .wrapper(280px);
+    .font(15px; 30px; 400);
+    padding-top: 5px;
+  }
+
+  @media @desktop {
+    .wrapper(256px);
+    padding-bottom: 0;
+  }
 }
 
 .product-card__footer {
-  padding-bottom: 30px;
-  border-top: 1px solid @grey-border;
+  .wrapper(200px);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 28px;
+  border-top: 1px solid @greyDark;
+
+  @media @tablet {
+    .wrapper(268px);
+    margin-top: auto;
+    padding-top: 0;
+    padding-bottom: 25px;
+  }
+
+  @media @desktop {
+    .wrapper(256px);
+    margin-top: auto;
+    display: flex;
+  }
 }
 
 .product-card__price {
   margin: 0;
-  padding-top: 25px;
   font-size: 15px;
+
+  @media @tablet {
+    .font();
+    padding-top: 23px;
+  }
+
+  @media @desktop {
+    align-self: flex-end;
+    margin-left: -3px;
+    padding-top: 22px;
+  }
+}
+
+.product-card__pict {
+  padding-top: 3px;
+  width: 20px;
+  height: 20px;
+  fill: @black;
+  opacity: 0.2;
+  cursor: pointer;
+
+  &:hover {
+    fill: @green;
+    opacity: 1;
+  }
+
+  &:active {
+    fill: @green;
+    opacity: 0.3;
+  }
+
+  @media @tablet {
+    padding-top: 25px;
+  }
 }

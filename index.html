@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Mishka - Главная</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page">
     <header class="page__header">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrapper">
           <div class="main-nav__inner">
             <a class="logo">
-              <img class="logo__image" src="#" width="86" height="35" alt="Mishka">
+              <img class="logo__image" src="img/logo-mobile.svg" width="86" height="36" alt="Mishka">
             </a>
-            <button class="main-nav__button" type="button">Открыть меню</button>
+            <button class="main-nav__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
           </div>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
@@ -26,10 +25,20 @@
           </ul>
           <ul class="main-nav__list user-list">
             <li class="user-list__item user-list__item--search">
-              <a class="user-list__link user-list__link--search" href="#">Поиск по сайту</a>
+              <a class="user-list__link user-list__link--search" href="#">
+                <svg class="user-list__pict" width="27" height="22">
+                  <use xlink:href="img/header-sprite.svg#search"></use>
+                </svg>
+                <span>Поиск по сайту</span>
+              </a>
             </li>
             <li class="user-list__item user-list__item--basket">
-              <a class="user-list__link user-list__link--basket" href="#">Корзина: пока пуста</a>
+              <a class="user-list__link user-list__link--basket" href="#">
+                <svg class="user-list__pict" width="27" height="22">
+                  <use xlink:href="img/header-sprite.svg#cart"></use>
+                </svg>
+                <span>Корзина: пока пуста</span>
+              </a>
             </li>
           </ul>
           <ul class="main-nav__list desktop-list">
@@ -52,11 +61,17 @@
           <a class="promo__link promo__link--interior" href="interior.html">
             <div class="promo__inner">
               <b class="promo__item-text promo__item-text--interior">Предметы интерьера</b>
+              <svg class="promo__pict promo__pict--interior" width="40" height="62">
+                <use xlink:href="img/promo-sprite.svg#interior"></use>
+              </svg>
             </div>
           </a>
           <a class="promo__link promo__link--toy" href="toy.html">
             <div class="promo__inner">
               <b class="promo__item-text promo__item-text--toy">Детские игрушки</b>
+              <svg class="promo__pict promo__pict--toy" width="60" height="59">
+                <use xlink:href="img/promo-sprite.svg#toy"></use>
+              </svg>
             </div>
           </a>
         </div>
@@ -108,45 +123,63 @@
     <section class="features">
       <div class="features__wrapper">
         <h2 class="features__title">Коротко о нас:</h2>
-        <ul class="features__list">
-          <li class="features__item features__item--eco">
-            <p class="features__desc">Экологически чистые&nbsp;материалы</p>
-          </li>
-          <li class="features__item features__item--money">
-            <p class="features__desc">Скандинавский стиль по&nbsp;российской цене</p>
-          </li>
-          <li class="features__item features__item--like">
-            <p class="features__desc">Увеличивает лайки на&nbsp;фотографиях</p>
-          </li>
-          <li class="features__item features__item--knit">
-            <p class="features__desc">Связано вручную с любовью&nbsp;и&nbsp;умилением</p>
-          </li>
-          <li class="features__item features__item--rocket">
-            <p class="features__desc">Поддержка отечественного производителя</p>
-          </li>
-          <li class="features__item features__item--gift">
-            <p class="features__desc">Поставляется в подарочной&nbsp;упаковке</p>
-          </li>
-        </ul>
-      </div>
+          <ul class="features__list">
+            <li class="features__item">
+              <svg class="features__pict" width="47" height="37">
+                <use xlink:href="img/features-sprite.svg#eco"></use>
+              </svg>
+              <p class="features__desc">Экологически чистые&nbsp;материалы</p>
+            </li>
+            <li class="features__item">
+              <svg class="features__pict" width="47" height="37">
+                <use xlink:href="img/features-sprite.svg#knit"></use>
+              </svg>
+              <p class="features__desc">Связано вручную с любовью&nbsp;и&nbsp;умилением</p>
+            </li>
+            <li class="features__item">
+              <svg class="features__pict" width="47" height="37">
+                <use xlink:href="img/features-sprite.svg#money"></use>
+              </svg>
+              <p class="features__desc">Скандинавский стиль по&nbsp;российской цене</p>
+            </li>
+            <li class="features__item">
+              <svg class="features__pict" width="47" height="37">
+                <use xlink:href="img/features-sprite.svg#rocket"></use>
+              </svg>
+              <p class="features__desc">Поддержка отечественного производителя</p>
+            </li>
+            <li class="features__item">
+              <svg class="features__pict" width="47" height="37">
+                <use xlink:href="img/features-sprite.svg#like"></use>
+              </svg>
+              <p class="features__desc">Увеличивает лайки на&nbsp;фотографиях</p>
+            </li>
+            <li class="features__item">
+              <svg class="features__pict" width="47" height="37">
+                <use xlink:href="img/features-sprite.svg#gift"></use>
+              </svg>
+              <p class="features__desc">Поставляется в подарочной&nbsp;упаковке</p>
+            </li>
+          </ul>
+        </div>
     </section>
     <article class="reviews slider">
       <div class="reviews__wrapper">
         <h2 class="reviews__title">Отзывы</h2>
         <div class="reviews__list slider__list">
           <blockquote class="reviews__item slider__item">
-            <p class="reviews__text">Я молодая мама, но всё ровно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и мои игрушек в Мишке, и мои фотографиисразу стали более стильными, а также набирают больше лайков.</p>
+            <p class="reviews__text">Я молодая мама, но всё ровно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
             <cite class="rewiews__author-name">Анастасия Красильникова
               <span class="rewiews__author-name--nick">@misssssiskras</span>
             </cite>
           </blockquote>
         </div>
-        <div class="slider__buttons">
-          <button class="reviews__prew" type="button">
-            <img src="#" alt="Предыдущий отзыв">
+        <div class="reviews__slider-buttons">
+          <button class="reviews__slider-buttons--prew" type="button">
+            <span class="visually-hidden">Предыдущий отзыв</span>
           </button>
-          <button class="reviews__next" type="button">
-            <img src="#" alt="Следующий отзыв">
+          <button class="reviews__slider-buttons--next" type="button">
+            <span class="visually-hidden">Следующий отзыв</span>
           </button>
         </div>
         <div class="reviews__button">
@@ -164,7 +197,7 @@
           </tr>
           <tr>
             <td class="contacts__field">адрес:</td>
-            <td class="contacts__value contacts__value--address">г. Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д. 19/8,&nbsp;офис 101</td>
+            <td class="contacts__value contacts__value--address">г. Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8,&nbsp;офис 101</td>
           </tr>
         </table>
       </div>
@@ -183,24 +216,39 @@
       </a>
       <section class="social">
         <div class="social__wrapper">
-          <a class="social__link social__link--instagram" href="№">
+          <a class="social__link social__link--instagram" href="#">
+            <svg class="social__pict" width="22" height="27">
+              <use xlink:href="img/footer-sprite.svg#instagram"></use>
+            </svg>
             <span class="visually-hidden">Мы в Инстаграме</span>
           </a>
           <a class="social__link social__link--facebook" href="#">
+            <svg class="social__pict" width="22" height="27">
+              <use xlink:href="img/footer-sprite.svg#facebook"></use>
+            </svg>
             <span class="visually-hidden">Мы в Фейсбуке</span>
           </a>
           <a class="social__link social__link--twitter"  href="#">
+            <svg class="social__pict" width="22" height="27">
+              <use xlink:href="img/footer-sprite.svg#twitter"></use>
+            </svg>
             <span class="visually-hidden">Мы в Твитере</span>
           </a>
         </div>
       </section>
       <section class="copyright">
         <div class="copyright__wrapper">
-          <p class="copyright__text">Разработано</p>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss"><span class="visually-hidden">"HTML Academy"</span></a>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">
+            <p class="copyright__text">Разработано</p>
+            <svg class="copyright__pict" width="30" height="35">
+              <use xlink:href="img/footer-sprite.svg#logo-htmlacademy"></use>
+            </svg>
+            <span class="visually-hidden">"HTML Academy"</span>
+          </a>
         </div>
       </section>
     </div>
   </footer>
+  <script src="js/main-menu.js"></script>
 </body>
 </html>

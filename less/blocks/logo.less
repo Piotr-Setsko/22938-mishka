@@ -1,17 +1,29 @@
 .logo {
   .padding(22px);
-  display: inline-block;
-  vertical-align: top;
+  display: block;
+  width: 86px;
+  height: 36px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &--footer {
     display: none;
   }
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     width: 100px;
 
     &--footer {
       display: block;
+      //До появления графики
+      width: 180px;
+      height: 80px;
     }
   }
 }

@@ -1,11 +1,15 @@
 .modal-order {
   display: none;
-  border: solid 1px @color-modal;
+  border: solid 1px @greyDarker;
   box-shadow: 0 5px 10px fade(@black, 25%);
 }
 
 .modal-order__wrapper {
   .wrapper(@mobile-wrapper);
+
+  @media @tablet {
+    .wrapper(360px);
+  }
 }
 
 .modal-order__title {
@@ -13,14 +17,25 @@
   margin: 0;
   padding-top: 36px;
   text-align: center;
+
+  @media @tablet {
+    .font(30px; 57px; 700);
+    padding-top: 48px;
+  }
 }
 
 .modal-order__option {
+  .font(15px; 30px; 400);
   margin: 0;
-  padding-top: 25px;
+  padding-top: 20px;
   text-align: center;
+
+  @media @tablet {
+    .font(17px; 30px; 400);
+    padding-top: 20px;
+  }
 }
 
 .modal-order__form {
-  padding-top: 30px;
+  padding-top: 25px;
 }

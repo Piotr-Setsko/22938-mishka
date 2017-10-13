@@ -1,18 +1,20 @@
 .tagline {
-  .padding(75px);
   .font(27px; 30px; 700);
   margin: 0;
+  padding-top: 71px;
+  padding-bottom: 75px;
   text-align: center;
   background-color: @grey;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .font(43px; 50px; 700);
-    padding-top: 70px;
-    padding-bottom: 100px;
+    padding-top: 95px;
+    padding-bottom: 78px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     .padding(100px);
     .font(53px; 57px; 700);
+    padding-top: 95px;
   }
 }

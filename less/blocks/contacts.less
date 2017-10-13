@@ -1,5 +1,7 @@
 .contacts {
-  @media (min-width: @desktop-width) {
+  padding-top: 37px;
+
+  @media @desktop {
     .wrapper(@desktop-wrapper);
     display: flex;
     flex-wrap: wrap;
@@ -9,11 +11,11 @@
 .contacts__wrapper {
   .wrapper(@mobile-wrapper);
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .wrapper(@tablet-wrapper);
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding-left: 175px;
     width: 350px;
   }
@@ -22,50 +24,120 @@
 .contacts__title {
   .font(18px; 30px; 700);
   margin: 0;
-  padding-top: 40px;
+
+  @media @tablet {
+    .font(43px; 50px; 700);
+    margin-top: 28px;
+  }
+
+  @media @desktop {
+    .font(53px; 57px; 700);
+    margin-top: 112px;
+  }
 }
 
 .contacts__list {
   .font(15px; 30px; 400);
   margin-top: 10px;
-  color: @color-text;
+  color: @blackLighter;
   border-collapse: collapse;
+
+  @media @tablet {
+    .font(17px; 30px; 400);
+    margin-top: 35px;
+  }
+
+  @media @desktop {
+    margin-top: 32px;
+  }
+}
+
+.contacts__list tbody {
+  @media @tablet {
+    display: flex;
+  }
+
+  @media @desktop {
+    display: table;
+  }
+}
+
+.contacts__list tr {
+  @media @tablet {
+    &:nth-child(2) {
+      padding-left: 50px;
+    }
+  }
 }
 
 .contacts__field {
   .padding(15px);
   vertical-align: top;
+  width: 58px;
 }
 
 .contacts__value {
   .padding(15px);
-  padding-left: 28px;
+  padding-left: 15px;
+
+  @media @tablet {
+    padding-left: 20px;
+  }
+
+  @media @desktop {
+    width: @mobile-wrapper;
+  }
 }
 
 .contacts__link-email {
   padding-bottom: 4px;
-  color: @color-text;
+  color: @blackLighter;
   text-decoration: none;
-  border-bottom: 1px solid @color-main;
+  border-bottom: 1px solid @green;
+
+  &:hover {
+    border-bottom: 1px solid @greenSecondLighter;
+    color: @greenSecondLighter;
+  }
+
+  &:focus {
+    border-bottom-color: @greenSecondLighter;
+    color: @greenSecondLighter;
+  }
+
+  &:active {
+    border-bottom-color: fade(@greenSecondLighter, 10%);
+    color: fade(@greenSecondLighter, 30%);
+  }
 }
 
 .contacts__map {
+  padding-top: 22px;
   width: 100%;
 
-  @media (min-width: @desktop-width) {
+  @media @tablet {
+    padding-top: 42px;
+  }
+
+  @media @desktop {
     width: 50%;
   }
 }
 
 .contacts__button {
   .wrapper(@mobile-wrapper);
+  .font(18px; 20px; 700);
+  margin-top: 36px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .wrapper(@button-width);
+    .font(17px; 20px; 700);
+    margin-top: 50px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     margin: 0;
+    margin-top: -80px;
     margin-right: auto;
     padding-left: 175px;
   }
