@@ -37,6 +37,9 @@
     box-sizing: border-box;
 
     &--header {
+      padding-top: 15px;
+      padding-left: 40px;
+      justify-content: flex-start;
       border-bottom: none;
     }
 
@@ -48,9 +51,17 @@
   @media @desktop {
     .wrapper(366px);
 
+    &--header {
+      padding-top: 40px;
+      padding-left: 79px;
+      flex-direction: column;
+      justify-content: flex-start;
+      border-bottom: none;
+    }
+
     &--main {
       margin: 0;
-      margin-top: -283px;
+      margin-top: -290px;
       margin-left: auto;
       padding-left: 20px;
       border: none;
@@ -91,8 +102,10 @@
 .video__pict {
   &--play {
     position: absolute;
-    top: 24%;
-    left: 28%;
+    top: 50%;
+    left: 50%;
+    margin-top: -35px;
+    margin-left: -55px;
     width: 110px;
     height: 77px;
     cursor: pointer;
@@ -109,11 +122,22 @@
   }
 
   &--camera {
-    align-items: center;
     padding-top: 25px;
     width: 35px;
     height: 35px;
     fill: @green;
+  }
+
+  @media @tablet {
+    &--camera {
+      padding-top: 15px;
+    }
+  }
+
+  @media @desktop {
+    &--camera {
+      padding-top: 0;
+    }
   }
 }
 
@@ -125,17 +149,16 @@
   width: 126px;
 
   @media @tablet {
-    .wrapper(584px);
     .font(20px; 24px; 700);
-    padding-top: 38px;
-    padding-left: 65px;
+    padding-left: 30px;
+    width: auto;
     box-sizing: border-box;
   }
 
   @media @desktop {
-    .wrapper(230px);
-    padding-top: 95px;
-    padding-left: 10px;
+    width: 200px;
+    padding-top: 20px;
+    padding-left: 0px;
   }
 }
 
@@ -148,7 +171,7 @@
   @media @tablet {
     .wrapper(584px);
     .font(15px; 30px; 400);
-    padding-top: 7px;
+    padding-top: 11px;
   }
 
   @media @desktop {

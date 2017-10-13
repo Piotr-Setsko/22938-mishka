@@ -44,12 +44,6 @@
   display: flex;
   justify-content: flex-start;
 
-  & svg {
-    padding-left: 34px;
-    padding-right: 25px;
-    opacity: 0.2;
-  }
-
   @media @tablet {
     .padding(32px);
     .font(17px; 24px; 700);
@@ -74,5 +68,19 @@
       width: 265px;
       box-sizing: border-box;
     }
+  }
+}
+
+.user-list__pict {
+  padding-left: 34px;
+  padding-right: 25px;
+  opacity: 0.2;
+
+  @media @tablet {
+    width: 20px;
+    height: 20px;
+    padding-top: 5px;
+    padding-left: 32px;
+    padding-right: 30px;
   }
 }
