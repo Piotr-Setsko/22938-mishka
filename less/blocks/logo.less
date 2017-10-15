@@ -2,7 +2,7 @@
   .padding(22px);
   display: block;
   width: 86px;
-  height: 36px;
+  height: 35px;
 
   &:hover {
     opacity: 0.6;
@@ -17,13 +17,38 @@
   }
 
   @media @tablet {
-    width: 100px;
+    padding-bottom: 8px;
+    width: 115px;
+    height: 46px;
+
+    & img {
+    width: 115px;
+    height: 46px;
+  }
 
     &--footer {
       display: block;
-      //До появления графики
+      padding-top: 15px;
       width: 180px;
-      height: 80px;
+    }
+
+    &--footer:hover svg {
+      fill: @greenSecondLighter;
+    }
+
+    &--footer:active svg {
+      fill: fade(@greenSecondLighter, 30%);
+    }
+  }
+
+  @media @desktop {
+    padding-top: 10px;
+    width: 145px;
+    height: 70px;
+
+    & img {
+      width: 145px;
+      height: 70px;
     }
   }
 }

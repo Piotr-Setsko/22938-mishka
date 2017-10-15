@@ -1,31 +1,43 @@
 .product {
-  .wrapper(@mobile-wrapper);
-  margin-top: 25px;
-
   &::after {
     .background-zigzag();
     margin-top: 35px;
-    //Временная картинка
-    background-image: url("../img/zigzag-line-desktop.png");
+    height: 7px;
+    background-repeat: repeat;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: auto 7px;
   }
+
+  @media @tablet {
+    &::after {
+      .wrapper(768px);
+      margin-top: 55px;
+      height: 22px;
+      background-size: auto 22px;
+    }
+  }
+
+  @media @desktop {
+    &::after {
+      .wrapper(1200px);
+      margin-top: 80px;
+    }
+  }
+}
+
+.product__wrapper {
+  .wrapper(@mobile-wrapper);
+  margin-top: 25px;
 
   @media @tablet {
     .wrapper(@tablet-wrapper);
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     margin-top: 12px;
-
-    &::after {
-      margin-top: 55px;
-    }
   }
-
   @media @desktop {
     .wrapper(@desktop-wrapper);
-
-    &::after {
-      margin-top: 80px;
-    }
   }
 }
 
@@ -34,12 +46,14 @@
   @media @tablet {
     display: flex;
     justify-content: space-between;
+    flex-direction: row-reverse;
     width: 100%;
   }
 
   @media @desktop {
     display: flex;
     justify-content: flex-start;
+    flex-direction: row;
     margin-top: 80px;
     margin-left: 23px;
     width: 100%;
@@ -50,6 +64,7 @@
   .font(25px; 30px; 700);
 
   @media @tablet {
+    order: 1;
     .font(43px;50px; 700);
   }
 
@@ -83,6 +98,7 @@
 
 .product__main {
   @media @tablet {
+    order: 2;
     width: 292px;
   }
 
@@ -161,6 +177,7 @@
   padding-top: 30px;
 
   @media @tablet {
+    order: 3;
     padding-top: 20px;
     padding-left: 43px;
   }
@@ -175,6 +192,7 @@
 
 .product__footer {
   @media @tablet {
+    order: 4;
     margin-top: -135px;
     width: 44%;
   }
