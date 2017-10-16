@@ -23,9 +23,10 @@
 @desktop-wrapper: 1050px;
 @desktop: ~"(min-width: 1200px)";
 
-@retina-dpi: 144dpi;
-@retina-dppx: 1.5dppx;
-@retina: ~"@retina";
-
+@retina: ~"(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
+@retina-tablet: ~"(min-width: 768px) and (min-resolution: 144dpi),
+  (min-width: 768px) and (min-resolution: 1.5dppx)";
+@retina-desktop: ~"(min-width: 1200px) and (min-resolution: 144dpi),
+  (min-width: 1200px) and (min-resolution: 1.5dppx)";
 
 @font-family: "Open Sans", "Arial", sans-serif;

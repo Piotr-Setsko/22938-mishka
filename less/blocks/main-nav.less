@@ -1,5 +1,5 @@
 .main-nav {
-  position: relative;
+
 
   &--opened .main-nav__button {
     top: 24px;
@@ -14,8 +14,8 @@
     @media @mobile-only {
       position: absolute;
       top: 80px;
-      right: 0;
-      z-index: 10;
+      left: center;
+      z-index: 7;
     }
   }
 
@@ -29,8 +29,8 @@
     @media @mobile-only {
       position: absolute;
       top: 240px;
-      right: 0;
-      z-index: 10;
+      left: center;
+      z-index: 7;
     }
   }
 
@@ -61,6 +61,9 @@
 }
 
 .main-nav__wrapper {
+  .wrapper(@mobile-width);
+  position: relative;
+
   @media @tablet {
     .wrapper(768px);
     display: flex;

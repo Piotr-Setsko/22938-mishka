@@ -1,20 +1,13 @@
-//var catalog = document.querySelectorAll("svg.product-card__pict");
-
   var popup = document.querySelector(".modal-order");
   var overlay = document.querySelector(".modal__overlay");
 
-  //if (document.querySelector(".product__order"))
-
-  //var link = document.querySelectorAll(".product__order");
-  //link.addEventListener('click', function (evt) {
-  //evt.preventDefault();
-  //popup.classList.add("modal-show");
-//  overlay.classList.add("modal__overlay-show");
-//});
 
 
-  if (document.querySelectorAll(".product-card__pict")) var link = document.querySelectorAll(".product-card__pict");
-  else document.querySelectorAll(".product__order") && (link = document.querySelectorAll(".product__order"));
+  if (document.querySelectorAll(".product-card__pict"))
+  var link = document.querySelectorAll(".product-card__pict");
+  else
+    document.querySelectorAll(".product__order")
+    (link = document.querySelectorAll(".product__order"));
     for (var i = 0; i < link.length; i++) {
     link[i].addEventListener('click', function (evt) {
     evt.preventDefault();
