@@ -14,7 +14,7 @@
 
 if (document.querySelectorAll(".product__order"))
 var link = document.querySelectorAll(".product__order");
- else if (document.querySelectorAll(".product-card__pict"));
+else if (document.querySelectorAll(".product-card__pict"));
   link = document.querySelectorAll(".product-card__pict");
   for (var i = 0; i < link.length; i++) {
     link[i].addEventListener('click', function (evt) {
