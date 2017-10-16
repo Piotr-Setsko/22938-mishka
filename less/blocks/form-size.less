@@ -2,10 +2,14 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding-top: 20px;
 }
 
 .form-size__input {
-  display: none;
+
+  &:checked + .form-size__label {
+    border: 2px solid @green;
+  }
 }
 
 .form-size__label {
@@ -15,7 +19,16 @@
   text-align: center;
   width: 30%;
   line-height: 16px;
-  border: 2px solid @grey;
+  border: 2px solid fade(@blackLighter, 10%);
+  cursor: pointer;
+
+  &:hover {
+    border-color: fade(@blackLighter, 30%);
+  }
+
+  &:active {
+    border-color: @green;
+  }
 }
 
 .form-size__button {
@@ -29,4 +42,5 @@
   text-transform: uppercase;
   background-color: @green;
   border: none;
+  cursor: pointer;
 }

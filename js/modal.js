@@ -12,11 +12,10 @@
 //  overlay.classList.add("modal__overlay-show");
 //});
 
-if (document.querySelectorAll(".product__order"))
-var link = document.querySelectorAll(".product__order");
-else if (document.querySelectorAll(".product-card__pict"));
-  link = document.querySelectorAll(".product-card__pict");
-  for (var i = 0; i < link.length; i++) {
+
+  if (document.querySelectorAll(".product-card__pict")) var link = document.querySelectorAll(".product-card__pict");
+  else document.querySelectorAll(".product__order") && (link = document.querySelectorAll(".product__order"));
+    for (var i = 0; i < link.length; i++) {
     link[i].addEventListener('click', function (evt) {
     evt.preventDefault();
     popup.classList.add("modal-show");

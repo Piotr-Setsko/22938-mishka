@@ -2,15 +2,17 @@
   position: fixed;
   top: 120px;
   left: 50%;
-  margin-left: -130px;
   display: none;
+  margin-left: -160px;
+  width: 320px;
   background-color: @white;
   border: solid 1px @greyDarker;
   box-shadow: 0 5px 10px fade(@black, 25%);
   z-index: 15;
 
   @media @tablet {
-    margin-left: -190px;
+    margin-left: -280px;
+    width: 566px;
   }
 
   @media @desktop {
@@ -26,7 +28,7 @@
   }
 
   @media @desktop {
-    width: 566px;
+    .wrapper(360px);
   }
 }
 
@@ -38,7 +40,7 @@
 
   @media @tablet {
     .font(30px; 57px; 700);
-    padding-top: 48px;
+    padding-top: 35px;
   }
 }
 
@@ -50,12 +52,8 @@
 
   @media @tablet {
     .font(17px; 30px; 400);
-    padding-top: 20px;
+    padding-top: 15px;
   }
-}
-
-.modal-order__form {
-  padding-top: 25px;
 }
 
 .modal-show {
