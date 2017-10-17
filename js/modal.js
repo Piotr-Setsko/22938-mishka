@@ -1,13 +1,8 @@
   var popup = document.querySelector(".modal-order");
   var overlay = document.querySelector(".modal__overlay");
 
-
-
-  if (document.querySelectorAll(".product-card__pict"))
-  var link = document.querySelectorAll(".product-card__pict");
-  else
-    document.querySelectorAll(".product__order")
-    (link = document.querySelectorAll(".product__order"));
+    if (document.querySelectorAll(".modal__btn"))
+    var link = document.querySelectorAll(".modal__btn");
     for (var i = 0; i < link.length; i++) {
     link[i].addEventListener('click', function (evt) {
     evt.preventDefault();
