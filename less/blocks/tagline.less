@@ -1,10 +1,26 @@
 .tagline {
+  background-color: @grey;
+
+  @media @tablet {
+    &::after {
+      .background-zigzag();
+      position: relative;
+      margin-top: -10px;
+      height: 15px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: auto 30px;
+      z-index: 5;
+    }
+  }
+}
+
+.tagline__text {
   .font(27px; 30px; 700);
   margin: 0;
   padding-top: 71px;
   padding-bottom: 75px;
   text-align: center;
-  background-color: @grey;
+
 
   @media @tablet {
     .font(43px; 50px; 700);

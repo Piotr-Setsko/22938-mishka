@@ -1,6 +1,4 @@
 .main-nav {
-  position: relative;
-
   &--opened .main-nav__button {
     top: 24px;
     background-image: url("../img/icon-menu-close.svg");
@@ -10,12 +8,18 @@
     background-image: url("../img/icon-menu-open.svg");
   }
 
+  &--closed {
+    @media @tablet {
+      border-bottom: 1px solid @greyDark;
+    }
+  }
+
   &--opened .site-list {
     @media @mobile-only {
       position: absolute;
       top: 80px;
-      right: 0;
-      z-index: 10;
+      left: center;
+      z-index: 7;
     }
   }
 
@@ -29,8 +33,8 @@
     @media @mobile-only {
       position: absolute;
       top: 240px;
-      right: 0;
-      z-index: 10;
+      left: center;
+      z-index: 7;
     }
   }
 
@@ -61,6 +65,9 @@
 }
 
 .main-nav__wrapper {
+  .wrapper(@mobile-width);
+  position: relative;
+
   @media @tablet {
     .wrapper(768px);
     display: flex;
@@ -82,15 +89,15 @@
   @media @tablet {
     justify-content: flex-start;
     margin: 0;
-    padding-left: 50px;
+    padding-left: 48px;
     flex-grow: 1;
-    border-bottom: 1px solid @greyDark;
   }
 
   @media @desktop {
-    justify-content: center;
+    justify-content: flex-start;
     order: 2;
-    padding-left: 0;
+    margin-right: -10px;
+    padding-left: 45px;
   }
 }
 

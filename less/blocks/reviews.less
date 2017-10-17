@@ -4,27 +4,48 @@
   &::after {
     .background-zigzag();
     margin-top: 44px;
-    //Временная картинка
-    background-image: url("../img/zigzag-line-desktop.png");
+    height: 7px;
+    background-repeat: repeat;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: auto 7px;
   }
 
   @media @tablet {
-    margin-top: 86px;
-
     &::after {
-      //До появления графики
-      margin-top: 110px;
+      margin-top: 65px;
+      height: 16px;
+      background-size: auto 16px;
     }
   }
 
   @media @desktop {
-    .wrapper(@desktop-wrapper);
-    margin-top: 75px;
-
     &::after {
-      //До появления графики
-      margin-top: 160px;
+      margin-top: 70px;
+      height: 22px;
+      background-size: auto 22px;
     }
+  }
+}
+
+.reviews__inner {
+  @media @tablet {
+    .wrapper(768px);
+    margin-top: 86px;
+    padding-bottom: 42px;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    @media @retina-tablet {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px;
+    }
+  }
+
+  @media @desktop {
+    .wrapper(1200px);
+    padding-bottom: 85px;
+    background-position: 75px 15px;
   }
 }
 
@@ -40,9 +61,10 @@
   }
 
   @media @desktop {
+    .wrapper(@desktop-wrapper);
+    margin-top: 75px;
     padding-top: 85px;
     padding-left: 175px;
-    width: 100%;
     box-sizing: border-box;
   }
 }
@@ -122,6 +144,7 @@
   &--prew {
     .slider-button();
     background-image: url("../img/icon-left-arrow.svg");
+    background-color: @white;
     border-right: 1px solid @greyDark;
 
     &:hover {
@@ -140,6 +163,7 @@
   &--next {
     .slider-button();
     background-image: url("../img/icon-right-arrow.svg");
+    background-color: @white;
 
     &:hover {
       opacity: 0.6;

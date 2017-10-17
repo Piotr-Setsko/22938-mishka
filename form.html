@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Mishka - Форма</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <script>
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.js" async></script>
 </head>
 <body class="page">
   <div class="page__inner">
@@ -13,7 +18,11 @@
         <div class="main-nav__wrapper">
           <div class="main-nav__inner">
             <a class="logo" href="index.html">
-              <img class="logo__image" src="img/logo-mobile.svg" width="86" height="36" alt="Mishka">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img src="img/logo-mobile.svg" width="86" height="36" alt="Mishka">
+              </picture>
             </a>
             <button class="main-nav__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
           </div>
@@ -56,7 +65,9 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="tagline">Вязание на заказ</h1>
+      <div class="tagline">
+        <h1 class="tagline__text">Вязание на заказ</h1>
+      </div>
       <form class="form-order" action="https://echo.htmlacademy.ru" method="post">
         <div class="form-order__wrapper">
           <p class="form-order__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
@@ -138,8 +149,10 @@
     </main>
     <footer class="page__footer">
       <div class="page__wrapper">
-        <a class="logo--footer">
-          <img class="logo__image" src="#" width="86" height="35" alt="Mishka">
+        <a class="logo--footer" href="index.html">
+          <svg width="102" height="35">
+            <use xlink:href="img/footer-sprite.svg#logo-footer"></use>
+          </svg>
         </a>
         <section class="social">
           <div class="social__wrapper">
@@ -178,5 +191,7 @@
     </footer>
   </div>
   <script src="js/main-menu.js"></script>
+  <script src="js/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
 </body>
 </html>

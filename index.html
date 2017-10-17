@@ -3,15 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Mishka - Главная</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/style.css" rel="stylesheet">
+  <script>
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.js" async></script>
 </head>
 <body class="page">
+  <div class="page__inner">
+  <div class="modal__overlay"></div>
     <header class="page__header">
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrapper">
           <div class="main-nav__inner">
             <a class="logo">
-              <img class="logo__image" src="img/logo-mobile.svg" width="86" height="36" alt="Mishka">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img src="img/logo-mobile.svg" width="86" height="36" alt="Mishka">
+              </picture>
             </a>
             <button class="main-nav__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
           </div>
@@ -78,6 +89,7 @@
       </div>
       </section>
       <article class="product">
+        <div class="product__wrapper">
         <div class="product__header">
           <h2 class="product__title">Вязаные корзинки</h2>
           <b class="product__top">Товар недели</b>
@@ -99,27 +111,19 @@
             </tr>
           </table>
         </div>
-        <img class="product__img" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+        <span class="product__image-wrapper">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+          <img class="product__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
+        </picture>
+      </span>
         <div class="product__footer">
           <b class="product__price">Цена: 990 руб.</b>
           <a class="product__order button" href="#">Заказать</a>
         </div>
-      </article>
-      <section class="modal-order">
-        <div class="modal-order__wrapper">
-          <h3 class="modal-order__title">Добавить в&nbsp;корзину</h3>
-          <p class="modal-order__option">Выберите размер:</p>
-          <form class="modal-order__form form-size" action="https://echo.htmlacademy.ru" method="post">
-            <input class="form-size__input" type="radio" name="size" id="size-small" value="size-small" checked>
-            <label class="form-size__label form-size__label--small" for="size-small">S<span class="visually-hidden">Маленький размер</span></label>
-          <input class="form-size__input" type="radio" name="size" id="size-middle" value="size-middle">
-          <label class="form-size__label form-size__label--middle" for="size-middle">M<span class="visually-hidden">Средний размер</span></label>
-          <input class="form-size__input" type="radio" name="size" id="size-large" value="size-large">
-          <label class="form-size__label form-size__label--large" for="size-large">L<span class="visually-hidden">Большой размер</span></label>
-          <button class="form-size__button" type="button">Добавить</button>
-        </form>
       </div>
-    </section>
+    </article>
     <section class="features">
       <div class="features__wrapper">
         <h2 class="features__title">Коротко о нас:</h2>
@@ -164,6 +168,7 @@
         </div>
     </section>
     <article class="reviews slider">
+      <div class="reviews__inner">
       <div class="reviews__wrapper">
         <h2 class="reviews__title">Отзывы</h2>
         <div class="reviews__list slider__list">
@@ -186,10 +191,16 @@
           <a class="reviews__write button" href="reviews.html">Написать</a>
         </div>
       </div>
+    </div>
     </article>
     <section class="contacts">
       <div class="contacts__wrapper">
+        <div class="contacts__inner">
         <h3 class="contacts__title">Контакты</h3>
+        <svg class="contacts__pict" width="47" height="82">
+          <use xlink:href="img/footer-sprite.svg#icon-flag"></use>
+        </svg>
+      </div>
         <table class="contacts__list">
           <tr>
             <td class="contacts__field">e-mail:</td>
@@ -201,9 +212,7 @@
           </tr>
         </table>
       </div>
-      <div class="contacts__map">
-        <img src="img/map-mobile@1x.jpg" alt="Карта" width="320" height="457">
-      </div>
+      <div class="contacts__map" id="map"></div>
       <div class="contacts__button">
         <a class="contacts__write button" href="contacts.html">Напишите нам</a>
       </div>
@@ -212,7 +221,9 @@
   <footer class="page__footer">
     <div class="page__wrapper">
       <a class="logo--footer">
-        <img class="logo__image" src="#" width="86" height="35" alt="Mishka">
+        <svg width="102" height="35">
+          <use xlink:href="img/footer-sprite.svg#logo-footer"></use>
+        </svg>
       </a>
       <section class="social">
         <div class="social__wrapper">
@@ -249,6 +260,27 @@
       </section>
     </div>
   </footer>
+</div>
+<section class="modal-order">
+  <div class="modal-order__wrapper">
+    <h3 class="modal-order__title">Добавить в&nbsp;корзину</h3>
+    <p class="modal-order__option">Выберите размер:</p>
+    <form class="modal-order__form form-size" action="https://echo.htmlacademy.ru" method="post">
+      <input class="form-size__input" type="radio" name="size" id="size-small" value="size-small" checked>
+      <label class="form-size__label form-size__label--small" for="size-small">S<span class="visually-hidden">Маленький размер</span></label>
+      <input class="form-size__input" type="radio" name="size" id="size-middle" value="size-middle">
+      <label class="form-size__label form-size__label--middle" for="size-middle">M<span class="visually-hidden">Средний размер</span></label>
+      <input class="form-size__input" type="radio" name="size" id="size-large" value="size-large">
+      <label class="form-size__label form-size__label--large" for="size-large">L<span class="visually-hidden">Большой размер</span></label>
+      <button class="form-size__button" type="submit">Добавить</button>
+  </form>
+</div>
+</section>
+<script src="js/google.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
   <script src="js/main-menu.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
 </body>
 </html>

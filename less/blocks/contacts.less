@@ -21,18 +21,46 @@
   }
 }
 
+.contacts__inner {
+  display: flex;
+  justify-content: space-between;
+
+  @media @desktop {
+    justify-content: flex-start;
+  }
+}
+
 .contacts__title {
   .font(18px; 30px; 700);
   margin: 0;
 
   @media @tablet {
     .font(43px; 50px; 700);
-    margin-top: 28px;
+    margin-top: 25px;
+    margin-left: -5px;
   }
 
   @media @desktop {
     .font(53px; 57px; 700);
-    margin-top: 112px;
+    order: 2;
+    margin-top: 100px;
+  }
+}
+
+.contacts__pict {
+  display: none;
+
+  @media @tablet {
+    display: block;
+    padding-top: 10px;
+  }
+
+  @media @desktop {
+    order: 1;
+    margin-top: 90px;
+    margin-left: -110px;
+    margin-right: 60px;
+    height: 80px;
   }
 }
 
@@ -44,11 +72,11 @@
 
   @media @tablet {
     .font(17px; 30px; 400);
-    margin-top: 35px;
+    margin-top: 15px;
   }
 
   @media @desktop {
-    margin-top: 32px;
+    margin-top: 10px;
   }
 }
 
@@ -64,8 +92,10 @@
 
 .contacts__list tr {
   @media @tablet {
+    width: 300px;
+
     &:nth-child(2) {
-      padding-left: 50px;
+      padding-left: 35px;
     }
   }
 }
@@ -81,7 +111,7 @@
   padding-left: 15px;
 
   @media @tablet {
-    padding-left: 20px;
+    padding-left: 15px;
   }
 
   @media @desktop {
@@ -112,27 +142,52 @@
 }
 
 .contacts__map {
-  padding-top: 22px;
+  margin-top: 22px;
   width: 100%;
+  height: 457px;
+  background-image: url("../img/map-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media @retina {
+    background-image: url("../img/map-mobile@2x.jpg");
+    background-size: cover;
+  }
+
+  & iframe {
+    width: 100%;
+    height: 457px;
+  }
 
   @media @tablet {
-    padding-top: 42px;
+    margin-top: 42px;
+    background-image: url("../img/map-tablet@1x.jpg");
+
+    @media @retina-tablet {
+      background-image: url("../img/map-tablet@2x.jpg");
+    }
   }
 
   @media @desktop {
+    margin-top: 33px;
     width: 50%;
+    background-image: url("../img/map-desktop@1x.jpg");
+
+    @media @retina-desktop {
+      background-image: url("../img/map-desktop@2x.jpg");
+    }
   }
 }
 
 .contacts__button {
   .wrapper(@mobile-wrapper);
   .font(18px; 20px; 700);
-  margin-top: 36px;
+  margin-top: 35px;
 
   @media @tablet {
     .wrapper(@button-width);
     .font(17px; 20px; 700);
-    margin-top: 50px;
+    margin-top: 55px;
   }
 
   @media @desktop {

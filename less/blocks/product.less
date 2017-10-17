@@ -1,31 +1,44 @@
 .product {
-  .wrapper(@mobile-wrapper);
-  margin-top: 25px;
-
   &::after {
     .background-zigzag();
     margin-top: 35px;
-    //Временная картинка
-    background-image: url("../img/zigzag-line-desktop.png");
+    height: 7px;
+    background-repeat: repeat;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: auto 7px;
   }
 
   @media @tablet {
-    .wrapper(@tablet-wrapper);
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 12px;
-
     &::after {
-      margin-top: 55px;
+      margin-top: 50px;
+      height: 16px;
+      background-size: auto 16px;
     }
   }
 
   @media @desktop {
-    .wrapper(@desktop-wrapper);
-
     &::after {
-      margin-top: 80px;
+      margin-top: 70px;
+      height: 22px;
+      background-size: auto 22px;
     }
+  }
+}
+
+.product__wrapper {
+  .wrapper(@mobile-wrapper);
+  margin-top: 25px;
+
+  @media @tablet {
+    .wrapper(678px);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 12px;
+  }
+
+  @media @desktop {
+    .wrapper(@desktop-wrapper);
   }
 }
 
@@ -34,14 +47,16 @@
   @media @tablet {
     display: flex;
     justify-content: space-between;
+    flex-direction: row-reverse;
     width: 100%;
   }
 
   @media @desktop {
     display: flex;
     justify-content: flex-start;
+    flex-direction: row;
     margin-top: 80px;
-    margin-left: 23px;
+    margin-left: 20px;
     width: 100%;
   }
 }
@@ -50,19 +65,21 @@
   .font(25px; 30px; 700);
 
   @media @tablet {
+    order: 1;
     .font(43px;50px; 700);
   }
 
   @media @desktop {
     .font(53px; 57px; 700);
     order: 2;
-    margin-left: 28px;
+    margin-left: 23px;
   }
 }
 
 .product__top {
   display: block;
   margin-top: -15px;
+  margin-right: 10px;
   line-height: 20px;
   color: @green;
   text-transform: uppercase;
@@ -83,6 +100,7 @@
 
 .product__main {
   @media @tablet {
+    order: 2;
     width: 292px;
   }
 
@@ -99,7 +117,7 @@
 
   @media @tablet {
     .font(17px; 30px; 400);
-    padding-top: 13px;
+    padding-top: 10px;
     padding-left: 2px;
   }
 
@@ -156,37 +174,36 @@
   }
 }
 
-.product__img {
+.product__image-wrapper {
+  display: block;
   padding-top: 30px;
 
   @media @tablet {
+    order: 3;
     padding-top: 20px;
-    padding-left: 40px;
-    // До подстановки адоптивной графики
-    width: 50%;
-    height: 404px;
+    padding-left: 43px;
   }
 
   @media @desktop {
-    margin-top: -155px;
+    margin-top: -152px;
     padding-top: 0;
     padding-left: 58px;
     z-index: -1;
-    // До подстановки адоптивной графики
-    width: 50%;
-    height: 636px;
   }
 }
 
 .product__footer {
+  padding-top: 3px;
+
   @media @tablet {
-    margin-top: -125px;
+    order: 4;
+    margin-top: -135px;
     width: 44%;
   }
 
   @media @desktop {
     width: 28%;
-    margin-top: -125px;
+    margin-top: -138px;
     padding-left: 175px;
   }
 }
@@ -204,6 +221,7 @@
 
 .product__order {
   @media @tablet {
+    width: 97%;
     margin-top: 34px;
   }
 }
