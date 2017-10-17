@@ -8,6 +8,12 @@
     background-image: url("../img/icon-menu-open.svg");
   }
 
+  &--closed {
+    @media @tablet {
+      border-bottom: 1px solid @greyDark;
+    }
+  }
+
   &--opened .site-list {
     @media @mobile-only {
       position: absolute;
@@ -85,7 +91,6 @@
     margin: 0;
     padding-left: 48px;
     flex-grow: 1;
-    border-bottom: 1px solid @greyDark;
   }
 
   @media @desktop {
