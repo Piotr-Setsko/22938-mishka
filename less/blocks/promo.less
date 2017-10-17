@@ -39,15 +39,16 @@
     background-size: cover;
 
     @media @retina-tablet {
-    background-image: url("../img/hero-tablet@2x.jpg");
+      background-image: url("../img/hero-tablet@2x.jpg");
     }
   }
 
   @media @desktop {
-    .wrapper(@desktop-wrapper);
+    .wrapper(1200px);
     background-image: url("../img/hero-desktop@1x.jpg");
+    background-position: center -15px;
 
-    @media  @retina-desktop {
+    @media @retina-desktop {
       background-image: url("../img/hero-desktop@2x.jpg");
     }
   }
@@ -162,6 +163,10 @@
 
   @media @tablet {
     .wrapper(262px);
+  }
+
+  @media @desktop {
+    .wrapper(85%);
   }
 }
 
