@@ -17,7 +17,7 @@ var server = require("browser-sync").create();
 var run = require("run-sequence");
 
 gulp.task("clean", function () {
- return del("build");
+  return del("build");
 });
 
 gulp.task("copy", function () {
