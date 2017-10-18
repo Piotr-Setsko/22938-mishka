@@ -14,6 +14,7 @@ var svgstore = require("gulp-svgstore");
 var rename = require("gulp-rename");
 var del = require("del");
 var server = require("browser-sync").create();
+var run = require("run-sequence");
 
 gulp.task("clean", function () {
  return del("build");
