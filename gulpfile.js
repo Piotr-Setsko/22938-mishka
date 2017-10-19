@@ -15,6 +15,8 @@ var rename = require("gulp-rename");
 var del = require("del");
 var server = require("browser-sync").create();
 var run = require("run-sequence");
+var uglify = require('gulp-uglify');
+var pump = require('pump');
 
 gulp.task("clean", function () {
   return del("build");
@@ -42,6 +44,16 @@ gulp.task("style", function() {
     .pipe(minify())
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"));
+});
+
+gulp.task('compress', function (cb) {
+  pump([
+        gulp.src('js/*.js'),
+        uglify(),
+        gulp.dest('build/js')
+    ],
+    cb
+  );
 });
 
 gulp.task("sprite", function () {
@@ -96,6 +108,7 @@ gulp.task("build", function(done) {
     "copy",
     "style",
     "sprite",
+    "compress",
     "html",
     done
   );

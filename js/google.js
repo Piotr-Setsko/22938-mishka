@@ -5,7 +5,7 @@ function initMap() {
   });
 
   var image = {
-    url: 'img/icon-map-pin.svg',
+    url: 'img/map-pin.svg',
     scaledSize: new google.maps.Size(66, 100.801),
   };
 
