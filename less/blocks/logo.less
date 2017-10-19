@@ -8,8 +8,16 @@
     opacity: 0.6;
   }
 
-  &:active {
+  & img:active {
     opacity: 0.3;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus img {
+    opacity: 0.6;
   }
 
   &--footer {
@@ -30,13 +38,19 @@
       display: block;
       padding-top: 15px;
       width: 180px;
+      cursor: pointer;
+      outline: none;
     }
 
     &--footer:hover svg {
       fill: @greenSecondLighter;
     }
 
-    &--footer:active svg {
+    &--footer:focus svg {
+      fill: @greenSecondLighter;
+    }
+
+    &--footer svg:active {
       fill: fade(@greenSecondLighter, 30%);
     }
   }

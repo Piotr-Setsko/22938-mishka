@@ -23,7 +23,7 @@
     color: fade(@black, 60%);
   }
 
-  &:active .site-list__link {
+  & .site-list__link:active {
     color: fade(@black, 30%);
   }
 
@@ -60,6 +60,7 @@
 
   &:focus {
     color: fade(@black, 60%);
+    outline: none;
   }
 
   @media @tablet {
