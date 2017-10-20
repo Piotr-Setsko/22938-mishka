@@ -6,6 +6,7 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
+var htmlmin = require('gulp-htmlmin');
 var autoprefixer = require("autoprefixer");
 var minify = require("gulp-csso");
 var imagemin = require("gulp-imagemin");
@@ -73,6 +74,12 @@ gulp.task("html", function () {
   .pipe(gulp.dest("build"));
 });
 
+gulp.task('minify', function() {
+  return gulp.src('build/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('build'));
+});
+
 gulp.task("images", function () {
   return gulp.src("img/**/*.{png,jpg,svg}")
   .pipe(imagemin([
@@ -110,6 +117,7 @@ gulp.task("build", function(done) {
     "sprite",
     "compress",
     "html",
+    "minify",
     done
   );
 });

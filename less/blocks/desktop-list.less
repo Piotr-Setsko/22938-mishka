@@ -15,7 +15,7 @@
     color: fade(@black, 60%);
   }
 
-  &:active .desktop-list__link {
+  & .desktop-list__link:active {
     color: fade(@black, 30%);
   }
 
@@ -30,6 +30,7 @@
 .desktop-list__link {
   &:focus {
     color: fade(@black, 60%);
+    outline: none;
   }
 
   @media @desktop {

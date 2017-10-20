@@ -123,6 +123,10 @@
     opacity: 0.3;
   }
 
+  &:focus .promo__item-text {
+    opacity: 0.3;
+  }
+
   &--toy {
     top: 0;
     right: 0;
@@ -143,12 +147,14 @@
     padding-top: 27px;
     padding-bottom: 26px;
 
-    &--interior:hover {
+    &--interior:hover,
+    &--interior:focus {
       top: -5px;
       padding-bottom: 31px;
     }
 
-    &--toy:hover {
+    &--toy:hover,
+    &--toy:focus {
       top: -5px;
       padding-bottom: 31px;
     }

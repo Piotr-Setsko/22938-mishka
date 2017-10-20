@@ -14,7 +14,7 @@
   box-shadow: 0 1px @greyDark,
     inset 0 1px @greyDark;
 
-  &:hover .user-list__link {
+  & .user-list__link:hover {
     color: fade(@black, 60%);
   }
 
@@ -23,8 +23,7 @@
     opacity: 1;
   }
 
-  &:active .user-list__link {
-    color: fade(@black, 30%);
+  & .user-list__link:active {
     opacity: 0.3;
   }
 
@@ -42,6 +41,11 @@
   .site-list__link;
   display: flex;
   justify-content: flex-start;
+
+  &:focus svg {
+    fill: @green;
+    opacity: 1;
+  }
 
   @media @tablet {
     .padding(32px);
