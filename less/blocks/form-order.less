@@ -43,6 +43,7 @@
 
 .form-order__item {
   .font(17px; 18px; 700);
+  position: relative;
   margin: 0;
   margin-top: 22px;
   margin-left: -1px;
@@ -288,7 +289,6 @@
 
   &--tel,
   &--email {
-    position: relative;
     padding-top: 0;
     width: 100%;
   }
@@ -303,9 +303,13 @@
     fill: @green;
   }
 
-  &--tel .form-order__pict {
-    top: 30px;
+/*  &--tel .form-order__pict {
+    top: 0;
   }
+
+  &--email .form-order__pict {
+    top: 0;
+  }*/
 
   @media @tablet {
     padding-top: 10px;
@@ -313,7 +317,7 @@
     flex-direction: row;
 
     &--tel .form-order__pict {
-      top: 20px;
+      top: 55px;
     }
   }
 
@@ -336,7 +340,6 @@
 
 .form-order__input-text {
   .font(19px; 18px; 400);
-  position: relative;
   display: block;
   padding-left: 15px;
   padding-top: 10px;
@@ -370,12 +373,14 @@
   }
 
   &--tel {
+    position: relative;
     padding-top: 10px;
     padding-bottom: 12px;
     width: inherit;
   }
 
   &--email {
+    position: relative;
     padding-top: 10px;
     padding-bottom: 16px;
     width: inherit;
@@ -402,16 +407,16 @@
 
 .form-order__pict {
   position: absolute;
-  right: -255px;
-  top: 20px;
+  right: 0px;
+  top: 32%;
 
   @media @tablet {
-    top: 10px;
+    top: -10px;
     right: 20px;
   }
 
   @media @desktop {
-    right: 0;
+    right: 180px;
   }
 }
 
