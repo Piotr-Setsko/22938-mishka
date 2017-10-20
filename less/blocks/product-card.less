@@ -6,7 +6,8 @@
   @media @desktop {
     .wrapper(@desktop-wrapper);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     margin-top: 72px;
   }
 }
@@ -45,6 +46,11 @@
     margin-top: 54px;
     display: block;
     width: 30%;
+    padding-right: 5%;
+
+    &:nth-child(3n) {
+      padding-right: 0;
+    }
 
     &:hover .product-card__wrapper {
       box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
