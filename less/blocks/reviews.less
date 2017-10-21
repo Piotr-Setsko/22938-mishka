@@ -116,13 +116,6 @@
   padding-top: 27px;
   font-style: normal;
 
-  &--nick {
-    .font(17px; 30px; 400);
-    display: block;
-    padding-top: 5px;
-    color: @blackLighter;
-  }
-
   @media @tablet {
     .font(18px; 24px; 700);
     padding-top: 57px;
@@ -134,49 +127,18 @@
   }
 }
 
+.rewiews__nick {
+  .font(17px; 30px; 400);
+  display: block;
+  padding-top: 5px;
+  color: @blackLighter;
+}
+
 .reviews__slider-buttons {
   display: flex;
   justify-content: center;
   margin-top: 27px;
   border: 1px solid @greyDark;
-
-
-  &--prew {
-    .slider-button();
-    background-image: url("../img/left-arrow.svg");
-    background-color: @white;
-    border-right: 1px solid @greyDark;
-
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:focus {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
-  }
-
-  &--next {
-    .slider-button();
-    background-image: url("../img/right-arrow.svg");
-    background-color: @white;
-
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:focus {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
-  }
 
   @media @tablet {
     order: 4;
@@ -185,7 +147,35 @@
     margin-left: auto;
     width: 137px;
     border: none;
+  }
+}
 
+.reviews__arrow {
+  .slider-button();
+  background-color: @white;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--prew {
+    background-image: url("../img/left-arrow.svg");
+    border-right: 1px solid @greyDark;
+  }
+
+  &--next {
+    background-image: url("../img/right-arrow.svg");
+  }
+
+  @media @tablet {
     &--prew {
       padding: 0;
       border-right: none;
@@ -197,6 +187,7 @@
     }
   }
 }
+
 
 .reviews__button {
   margin-top: 36px;

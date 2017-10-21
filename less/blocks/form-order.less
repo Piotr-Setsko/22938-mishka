@@ -1,18 +1,18 @@
 .form-order {
   .wrapper(@mobile-wrapper);
 
-  &--grey {
-    margin-bottom: -6px;
-  }
-
   @media @tablet {
     margin: 0;
     width: 100%;
+  }
+}
 
-    &--grey {
+.form-order__block-grey {
+    margin-bottom: -6px;
+
+    @media @tablet {
       margin-bottom: 0;
       background-color: @grey;
-    }
   }
 }
 

@@ -17,12 +17,12 @@
     <include src="build/img/sprite.svg"></include>
   </div>
   <div class="page__inner">
-    <div class="modal__overlay"></div>
+    <div class="modal-order__overlay"></div>
     <header class="page__header">
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrapper">
           <div class="main-nav__inner">
-            <a class="logo" title="Mishka - магазин товаров ручной работы для дома">
+            <a class="logo-header" title="Mishka - магазин товаров ручной работы для дома">
               <picture>
                 <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -132,7 +132,7 @@
           </span>
           <div class="product__footer">
             <b class="product__price">Цена: 990 руб.</b>
-            <a class="product__order button modal__btn" href="#">Заказать</a>
+            <a class="product__order button modal-order__btn" href="#">Заказать</a>
           </div>
         </div>
       </article>
@@ -187,15 +187,15 @@
                 <blockquote class="reviews__item slider__item">
                   <p class="reviews__text">Я молодая мама, но всё ровно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
                   <cite class="rewiews__author-name">Анастасия Красильникова
-                  <span class="rewiews__author-name--nick">@misssssiskras</span>
+                  <span class="rewiews__nick">@misssssiskras</span>
                 </cite>
               </blockquote>
             </div>
             <div class="reviews__slider-buttons">
-              <button class="reviews__slider-buttons--prew" type="button">
+              <button class="reviews__arrow reviews__arrow--prew" type="button">
                 <span class="visually-hidden">Предыдущий отзыв</span>
               </button>
-              <button class="reviews__slider-buttons--next" type="button">
+              <button class="reviews__arrow reviews__arrow--next" type="button">
                 <span class="visually-hidden">Следующий отзыв</span>
               </button>
             </div>
@@ -232,7 +232,7 @@
     </main>
     <footer class="page__footer">
       <div class="page__wrapper">
-        <a class="logo--footer">
+        <a class="logo-footer">
           <svg width="102" height="35">
             <title>Mishka - магазин товаров ручной работы для дома</title>
             <use xlink:href="#icon-logo-footer"></use>
