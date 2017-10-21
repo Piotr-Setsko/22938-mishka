@@ -42,11 +42,12 @@
   }
 
   @media @desktop {
+    flex-direction: column;
     margin: 0;
     margin-top: 54px;
-    display: block;
     width: 30%;
     padding-right: 5%;
+    min-height: 659px;
 
     &:nth-child(3n) {
       padding-right: 0;
@@ -103,9 +104,8 @@
 
   @media @desktop {
     .wrapper(315px);
-    position: relative;
+    flex-grow: 1;
     box-sizing: border-box;
-    min-height: 197px;
   }
 }
 
@@ -191,9 +191,7 @@
 
   @media @desktop {
     .wrapper(256px);
-    position: absolute;
-    bottom: 0;
-    left: 30px;
+    margin-top: auto;
   }
 }
 
@@ -235,7 +233,6 @@
     opacity: 0.3;
   }
 }
-
 
 .product-card__pict {
   padding-top: 3px;
