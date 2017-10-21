@@ -82,9 +82,9 @@
 
 .main-nav__inner {
   .wrapper(@mobile-wrapper);
-  position: relative;
+//  position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 
   @media @tablet {
     justify-content: flex-start;
@@ -102,10 +102,11 @@
 }
 
 .main-nav__button {
-  position: absolute;
-  top: 32px;
-  right: 30px;
-  z-index: 2;
+//  position: absolute;
+//  top: 32px;
+//  right: 30px;
+//  z-index: 2;
+  align-self: center;
   display: block;
   width: 21px;
   height: 21px;
