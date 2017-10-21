@@ -1,6 +1,6 @@
 .features__wrapper {
   .wrapper(@mobile-wrapper);
-  margin-top: 30px;
+  margin-top: 40px;
 
   @media @tablet {
     .wrapper(@tablet-wrapper);
@@ -9,12 +9,13 @@
 
   @media @desktop {
     .wrapper(700px);
-    margin-top: 66px;
+    margin-top: 67px;
   }
 }
 
 .features__title {
   margin: -10px;
+  padding-left: 10px;
 
   @media @tablet {
     .font(43px; 50px; 700);
@@ -29,13 +30,17 @@
   .reset();
   display: flex;
   flex-direction: column;
-  margin-top: 5px;
+  margin-top: 15px;
 
   @media @tablet {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: -10px;
+  }
+
+  @media @desktop {
+    margin-top: -15px;
   }
 }
 
