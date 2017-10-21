@@ -1,4 +1,13 @@
 .main-nav {
+  @media @mobile-only {
+    position: relative;
+    padding-bottom: 80px;
+
+    &--nojs {
+      padding-bottom: 0;
+    }
+  }
+
   &--opened .main-nav__button {
     top: 24px;
     background-image: url("../img/menu-close.svg");
@@ -14,27 +23,9 @@
     }
   }
 
-  &--opened .site-list {
-    @media @mobile-only {
-      position: absolute;
-      top: 80px;
-      left: center;
-      z-index: 7;
-    }
-  }
-
   &--closed .site-list__item {
     @media @mobile-only {
       display: none;
-    }
-  }
-
-  &--opened .user-list {
-    @media @mobile-only {
-      position: absolute;
-      top: 240px;
-      left: center;
-      z-index: 7;
     }
   }
 
@@ -46,6 +37,7 @@
 
   &--nojs .main-nav__wrapper {
     @media @mobile-only {
+      .wrapper(@mobile-width);
       position: static;
       display: block;
     }
@@ -66,7 +58,14 @@
 
 .main-nav__wrapper {
   .wrapper(@mobile-width);
-  position: relative;
+
+  @media @mobile-only {
+    position: absolute;
+    margin-left: -160px;
+    top: 0;
+    left: 50%;
+    z-index: 7;
+  }
 
   @media @tablet {
     .wrapper(768px);
@@ -83,6 +82,7 @@
 
 .main-nav__inner {
   .wrapper(@mobile-wrapper);
+  position: relative;
   display: flex;
   justify-content: center;
 
@@ -97,7 +97,7 @@
     justify-content: flex-start;
     order: 2;
     margin-right: -10px;
-    padding-left: 45px;
+    padding-left: 30px;
   }
 }
 

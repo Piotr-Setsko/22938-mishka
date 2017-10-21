@@ -4,13 +4,16 @@
   @media @tablet {
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
     order: 3;
     margin-bottom: -65px;
+    width: 50%;
   }
 
   @media @desktop {
     order: 1;
     margin-bottom: 0;
+    width: 470px;
   }
 }
 
@@ -31,8 +34,9 @@
     box-shadow: none;
     background-color: inherit;
 
-    &:first-child {
+    &:nth-child(2n+1) {
       padding-left: 50px;
+      margin-bottom: -65px;
     }
   }
 
@@ -46,6 +50,10 @@
 
     &:last-child {
       border-right: none;
+    }
+
+    &:nth-child(2n+1) {
+      margin-bottom: 0;
     }
   }
 }

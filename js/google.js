@@ -5,13 +5,13 @@ function initMap() {
   });
 
   var image = {
-    url: 'img/map-pin.svg',
+    url: "img/map-pin.svg",
     scaledSize: new google.maps.Size(66, 100.801),
   };
 
   var marker = new google.maps.Marker({
     position: map.getCenter(),
-    title: 'г. Санкт-Петербург, \nул. Большая Конюшенная, \nд. 19/8, офис 101',
+    title: "г. Санкт-Петербург, \nул. Большая Конюшенная, \nд. 19/8, офис 101",
     map: map,
     optimized: false,
     icon: image
