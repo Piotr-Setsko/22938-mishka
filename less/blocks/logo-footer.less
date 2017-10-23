@@ -1,0 +1,23 @@
+.logo-footer {
+  display: none;
+
+  &:hover svg {
+    fill: @greenSecondLighter;
+  }
+
+  &:focus svg {
+    fill: @greenSecondLighter;
+  }
+
+  & svg:active {
+    fill: fade(@greenSecondLighter, 30%);
+  }
+
+  @media @tablet {
+    display: block;
+    width: 180px;
+    font-size: 0;
+    cursor: pointer;
+    outline: none;
+  }
+}

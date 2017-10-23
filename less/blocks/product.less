@@ -1,4 +1,6 @@
 .product {
+  .wrapper(@mobile-width);
+
   &::after {
     .background-zigzag();
     margin-top: 35px;
@@ -9,6 +11,8 @@
   }
 
   @media @tablet {
+    .wrapper(768px);
+
     &::after {
       margin-top: 50px;
       height: 16px;
@@ -17,6 +21,8 @@
   }
 
   @media @desktop {
+    .wrapper(1050px);
+
     &::after {
       margin-top: 70px;
       height: 22px;
@@ -102,6 +108,7 @@
   @media @tablet {
     order: 2;
     width: 292px;
+    margin-bottom: 170px;
   }
 
   @media @desktop {

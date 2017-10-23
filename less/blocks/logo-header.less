@@ -1,6 +1,7 @@
-.logo {
+.logo-header {
   .padding(22px);
   display: block;
+  margin-right: 67px;
   width: 86px;
   height: 36px;
 
@@ -20,10 +21,6 @@
     opacity: 0.6;
   }
 
-  &--footer {
-    display: none;
-  }
-
   @media @tablet {
     padding-bottom: 8px;
     width: 115px;
@@ -32,26 +29,6 @@
     & img {
       width: 115px;
       height: 46px;
-    }
-
-    &--footer {
-      display: block;
-      width: 180px;
-      font-size: 0;
-      cursor: pointer;
-      outline: none;
-    }
-
-    &--footer:hover svg {
-      fill: @greenSecondLighter;
-    }
-
-    &--footer:focus svg {
-      fill: @greenSecondLighter;
-    }
-
-    &--footer svg:active {
-      fill: fade(@greenSecondLighter, 30%);
     }
   }
 
