@@ -50,6 +50,7 @@
     "node": "8.5"
   },
   "dependencies": {
-    "imagemin-svgo": "^5.2.2"
+    "imagemin-svgo": "^5.2.2",
+    "natives": "^1.1.6"
   }
 }
